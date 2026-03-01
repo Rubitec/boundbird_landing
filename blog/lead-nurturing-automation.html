@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 lead nurturing automation strategies for agency growth - Boundbird</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fafafa; --bg-white: #ffffff; --bg-muted: #f4f4f5;
+  --border: #e4e4e7; --border-dark: #d4d4d8;
+  --accent: #18181b; --accent-hover: #27272a;
+  --green: #16a34a; --green-bg: #f0fdf4; --green-border: #bbf7d0;
+  --blue: #2563eb; --blue-bg: #eff6ff;
+  --orange: #ea580c; --orange-bg: #fff7ed;
+  --text: #18181b; --text-secondary: #52525b; --text-muted: #a1a1aa;
+  --radius: 12px; --radius-sm: 8px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', -apple-system, system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+
+nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 24px; height: 56px; display: flex; align-items: center; justify-content: space-between; background: rgba(250,250,250,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+.logo { font-family: 'Newsreader', Georgia, serif; font-weight: 600; font-size: 1.2rem; color: var(--text); text-decoration: none; letter-spacing: -0.02em; }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.15s; }
+.nav-links a:hover { color: var(--text); }
+.nav-links a.active { color: var(--text); font-weight: 600; }
+.btn { padding: 8px 18px; border-radius: 8px; font-size: 0.875rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: all 0.15s; border: none; }
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover { background: var(--accent-hover); }
+
+.post-layout { display: grid; grid-template-columns: 200px 1fr; max-width: 900px; margin: 0 auto; padding: 100px 24px 80px; gap: 48px; }
+.post-toc { position: sticky; top: 80px; align-self: start; }
+.post-toc h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 12px; font-weight: 600; }
+.post-toc a { display: block; font-size: 0.8rem; color: var(--text-muted); text-decoration: none; padding: 4px 0; border-left: 2px solid var(--border); padding-left: 12px; transition: all 0.15s; line-height: 1.4; margin-bottom: 2px; }
+.post-toc a:hover { color: var(--text); border-color: var(--text); }
+
+.post-header { margin-bottom: 40px; }
+.post-tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 12px; background: var(--orange-bg); color: var(--orange); }
+.post-title { font-family: 'Newsreader', Georgia, serif; font-size: clamp(1.75rem, 3.5vw, 2.5rem); font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; margin-bottom: 12px; }
+.post-meta { font-size: 0.82rem; color: var(--text-muted); display: flex; gap: 12px; align-items: center; }
+
+.post-content h2 { font-family: 'Newsreader', Georgia, serif; font-size: 1.5rem; font-weight: 500; letter-spacing: -0.01em; margin: 40px 0 12px; line-height: 1.3; }
+.post-content h3 { font-size: 1.05rem; font-weight: 600; margin: 28px 0 8px; }
+.post-content p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px; }
+.post-content ul, .post-content ol { margin: 0 0 16px 20px; }
+.post-content li { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 6px; }
+.post-content strong { color: var(--text); }
+.post-content blockquote { border-left: 3px solid var(--border-dark); padding: 12px 20px; margin: 20px 0; background: var(--bg-muted); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+.post-content blockquote p { margin: 0; font-style: italic; color: var(--text-secondary); }
+
+.post-cta { background: var(--bg-white); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin: 40px 0; text-align: center; }
+.post-cta h3 { font-family: 'Newsreader', Georgia, serif; font-size: 1.25rem; font-weight: 500; margin-bottom: 8px; }
+.post-cta p { font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 16px; }
+
+footer { padding: 48px 24px 32px; border-top: 1px solid var(--border); max-width: 1120px; margin: 0 auto; }
+.footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 32px; }
+.footer-brand { max-width: 260px; }
+.footer-brand .logo { display: block; margin-bottom: 8px; }
+.footer-brand p { color: var(--text-muted); font-size: 0.82rem; line-height: 1.6; }
+.footer-cols { display: flex; gap: 56px; }
+.footer-col h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 12px; font-weight: 600; }
+.footer-col a { display: block; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; padding: 2px 0; transition: color 0.15s; }
+.footer-col a:hover { color: var(--text); }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid var(--border); font-size: 0.78rem; color: var(--text-muted); }
+
+@media (max-width: 768px) {
+  .post-layout { grid-template-columns: 1fr; padding-top: 80px; gap: 0; }
+  .post-toc { display: none; }
+  nav .nav-links { display: none; }
+  .footer-grid { flex-direction: column; }
+  .footer-cols { gap: 32px; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">boundbird</a>
+  <ul class="nav-links">
+    <li><a href="/#features">Features</a></li>
+    <li><a href="/pricing.html">Pricing</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+  </ul>
+  <div><a href="https://cal.com/rubitec/30min" class="btn btn-primary">Book a demo</a></div>
+</nav>
+
+<div class="post-layout">
+  <aside class="post-toc">
+    <h4>On this page</h4>
+    <a href="#why">Why nurturing matters</a>
+    <a href="#s1">1. Multi-step sequences</a>
+    <a href="#s2">2. AI personalization</a>
+    <a href="#s3">3. Lead scoring triggers</a>
+    <a href="#s4">4. Content-based nurturing</a>
+    <a href="#s5">5. Re-engagement campaigns</a>
+    <a href="#tools">Choosing the right tool</a>
+  </aside>
+
+  <article>
+    <div class="post-header">
+      <div class="post-tag">Automation</div>
+      <h1 class="post-title">5 lead nurturing automation strategies for agency growth</h1>
+      <div class="post-meta">
+        <span>Feb 18, 2025</span>
+        <span>&middot;</span>
+        <span>7 min read</span>
+      </div>
+    </div>
+
+    <div class="post-content">
+      <p>Most agencies are great at getting the first connection. The problem is what happens next. Prospects go cold, follow-ups slip through the cracks, and potential clients end up signing with someone who simply stayed top of mind.</p>
+
+      <p>Lead nurturing automation fixes this. Instead of relying on memory and spreadsheets, you build systems that keep prospects warm and move them through your pipeline automatically.</p>
+
+      <p>Here are five strategies that work for agencies in 2025.</p>
+
+      <h2 id="why">Why lead nurturing matters for agencies</h2>
+
+      <p>Agency sales cycles are long. A founder you connect with today might not need your services for three months. Without a nurturing system, you lose that deal to whoever happens to message them at the right time.</p>
+
+      <p><strong>The numbers are clear:</strong> nurtured leads produce 20% more sales opportunities than non-nurtured leads. For agencies, where a single client can be worth tens of thousands per year, that's not a rounding error.</p>
+
+      <h2 id="s1">1. Build multi-step LinkedIn sequences</h2>
+
+      <p>The days of sending a connection request and hoping for the best are over. Modern outreach requires a sequence: connection, value message, follow-up, and a soft ask.</p>
+
+      <p>A good sequence looks like this:</p>
+
+      <ol>
+        <li><strong>Day 0:</strong> Personalized connection request referencing something specific</li>
+        <li><strong>Day 2:</strong> Thank-you message after acceptance with a relevant insight</li>
+        <li><strong>Day 5:</strong> Share a case study or resource related to their industry</li>
+        <li><strong>Day 8:</strong> Soft ask for a discovery call</li>
+      </ol>
+
+      <p>The key is spacing. Sending everything on the same day feels spammy. Smart delays that mimic human behavior get better results.</p>
+
+      <h2 id="s2">2. Use AI to personalize at scale</h2>
+
+      <p>Generic messages get ignored. But manually researching every prospect and writing custom messages doesn't scale. This is where AI comes in.</p>
+
+      <p>AI-powered tools can analyze a prospect's profile, company, recent posts, and industry context, then generate a message that feels personal without taking 15 minutes per contact.</p>
+
+      <blockquote><p>The best AI messages reference something specific: a recent hire, a company milestone, or a shared connection. They don't sound like they were written by a robot.</p></blockquote>
+
+      <p>For agencies, this means you can run outreach to 500+ prospects a month while still sounding like a human wrote every message.</p>
+
+      <h2 id="s3">3. Use lead scoring to trigger nurture flows</h2>
+
+      <p>Not every prospect deserves the same level of attention. Lead scoring helps you prioritize by assigning a score based on how closely a prospect matches your ideal client profile.</p>
+
+      <p>High-score leads (90+) should get immediate, personal outreach. Mid-score leads (60-80) go into automated nurture sequences. Low-score leads get deprioritized.</p>
+
+      <p>The automation layer: when a prospect's score changes (they engage with your content, change jobs, or their company starts hiring), they automatically move to a different nurture track.</p>
+
+      <h2 id="s4">4. Nurture through content, not just pitches</h2>
+
+      <p>The fastest way to kill a prospect relationship is to pitch on every touchpoint. Instead, mix in genuine value:</p>
+
+      <ul>
+        <li>Share a relevant case study from a similar industry</li>
+        <li>Comment on their LinkedIn posts before messaging them</li>
+        <li>Send a quick insight about a trend in their market</li>
+        <li>Forward a useful article (not your own content)</li>
+      </ul>
+
+      <p>This positions your agency as a partner, not a vendor. When they're ready to buy, you're the first call.</p>
+
+      <h2 id="s5">5. Re-engage prospects who went cold</h2>
+
+      <p>Every agency has a list of prospects who said "not right now." Most agencies never follow up again. That's money left on the table.</p>
+
+      <p>Set up re-engagement campaigns that trigger 30, 60, and 90 days after a prospect goes cold. The message should acknowledge the gap: "Hey, we chatted a few months ago about X. Wanted to check in since I saw your company just launched Y."</p>
+
+      <p>These campaigns consistently outperform cold outreach because there's already a foundation of familiarity.</p>
+
+      <h2 id="tools">Choosing the right tool</h2>
+
+      <p>The best nurturing tool for agencies needs three things: multi-step sequences, AI personalization, and lead scoring. Most enterprise tools offer some of this, but they're priced for large sales teams, not 5-person agencies.</p>
+
+      <p>Look for tools that are built specifically for agencies and small teams, with AI features that actually save time rather than just checking a feature box.</p>
+
+      <div class="post-cta">
+        <h3>Ready to automate your nurturing?</h3>
+        <p>Boundbird gives your agency AI-scored leads, multi-step sequences, and personalized messages on autopilot.</p>
+        <a href="https://cal.com/rubitec/30min" class="btn btn-primary" style="padding:10px 24px;">Book a demo</a>
+      </div>
+    </div>
+  </article>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="logo">boundbird</a>
+      <p>AI-powered LinkedIn outreach for agencies and small companies that need a full pipeline.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col"><h4>Product</h4><a href="/#features">Features</a><a href="/pricing.html">Pricing</a><a href="#">Changelog</a></div>
+      <div class="footer-col"><h4>Company</h4><a href="#">About</a><a href="/blog/">Blog</a><a href="#">Contact</a></div>
+      <div class="footer-col"><h4>Legal</h4><a href="#">Privacy</a><a href="#">Terms</a></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025 Boundbird. All rights reserved.</span>
+    <span>Made in Barcelona</span>
+  </div>
+</footer>
+
+</body>
+</html>
