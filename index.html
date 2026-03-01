@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MZVPMGVS');</script>
+<!-- End Google Tag Manager -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boundbird - Outreach that lands clients</title>
+<link rel="icon" type="image/svg+xml" href="/assets/favicon-D25pLX7c.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #fafafa;
+  --bg-white: #ffffff;
+  --bg-muted: #f4f4f5;
+  --border: #e4e4e7;
+  --border-dark: #d4d4d8;
+  --accent: #18181b;
+  --accent-hover: #27272a;
+  --green: #16a34a;
+  --green-bg: #f0fdf4;
+  --green-border: #bbf7d0;
+  --blue: #2563eb;
+  --blue-bg: #eff6ff;
+  --blue-border: #bfdbfe;
+  --orange: #ea580c;
+  --orange-bg: #fff7ed;
+  --orange-border: #fed7aa;
+  --text: #18181b;
+  --text-secondary: #52525b;
+  --text-muted: #a1a1aa;
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* === LAYOUT === */
+.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+/* === NAV === */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 0 24px; height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(250,250,250,0.85); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.logo {
+  font-family: 'Newsreader', Georgia, serif;
+  font-weight: 600; font-size: 1.2rem; color: var(--text);
+  text-decoration: none; letter-spacing: -0.02em;
+  display: inline-flex; align-items: center; gap: 7px;
+}
+.logo svg { width: 20px; height: 20px; flex-shrink: 0; }
+.nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+.nav-links a {
+  color: var(--text-secondary); text-decoration: none;
+  font-size: 0.875rem; font-weight: 500; transition: color 0.15s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.btn {
+  padding: 8px 18px; border-radius: 8px; font-size: 0.875rem;
+  font-weight: 600; cursor: pointer; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: all 0.15s; border: none;
+}
+.btn-primary {
+  background: var(--accent); color: white;
+}
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-secondary {
+  background: transparent; color: var(--text); border: 1px solid var(--border);
+}
+.btn-secondary:hover { background: var(--bg-muted); border-color: var(--border-dark); }
+
+/* === HERO === */
+.hero {
+  padding: 140px 24px 80px; text-align: center;
+  max-width: 720px; margin: 0 auto;
+}
+.hero-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 4px 12px 4px 6px;
+  background: var(--green-bg); border: 1px solid var(--green-border);
+  border-radius: 100px; font-size: 0.8rem; font-weight: 500;
+  color: var(--green); margin-bottom: 24px;
+}
+.hero-dot {
+  width: 6px; height: 6px; background: var(--green);
+  border-radius: 50%; animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+.hero h1 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(2.5rem, 5.5vw, 3.75rem);
+  font-weight: 500; letter-spacing: -0.03em;
+  line-height: 1.1; margin-bottom: 20px; color: var(--text);
+}
+.hero h1 em {
+  font-style: italic; font-weight: 400;
+}
+.hero p {
+  font-size: 1.1rem; color: var(--text-secondary);
+  line-height: 1.7; max-width: 520px; margin: 0 auto 32px;
+}
+.hero-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.hero-buttons .btn { padding: 12px 28px; font-size: 0.95rem; }
+
+/* === MOCKUP === */
+.mockup-wrapper {
+  max-width: 960px; margin: 64px auto 0; padding: 0 24px;
+}
+.mockup {
+  background: var(--bg-white); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 40px rgba(0,0,0,0.06);
+}
+.mockup-bar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 16px; border-bottom: 1px solid var(--border);
+  background: var(--bg-muted);
+}
+.mockup-dot { width: 8px; height: 8px; border-radius: 50%; }
+.dot-r { background: #ef4444; } .dot-y { background: #eab308; } .dot-g { background: #22c55e; }
+.mockup-url {
+  margin-left: 12px; padding: 4px 12px;
+  background: var(--bg-white); border: 1px solid var(--border);
+  border-radius: 6px; font-size: 0.72rem; color: var(--text-muted);
+}
+.mockup-body { display: grid; grid-template-columns: 200px 1fr; min-height: 340px; }
+
+/* Sidebar */
+.mock-sidebar {
+  border-right: 1px solid var(--border); padding: 16px 12px;
+  display: flex; flex-direction: column; gap: 2px; background: var(--bg);
+}
+.mock-nav {
+  display: flex; align-items: center; gap: 8px; padding: 7px 10px;
+  border-radius: 6px; font-size: 0.8rem; color: var(--text-secondary);
+  font-weight: 500;
+}
+.mock-nav.active { background: var(--bg-white); color: var(--text); font-weight: 600; box-shadow: 0 1px 2px rgba(0,0,0,0.04); }
+.mock-nav span { font-size: 0.85rem; }
+.mock-divider {
+  font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--text-muted); padding: 14px 10px 4px; font-weight: 600;
+}
+
+/* Main area */
+.mock-main { padding: 20px; }
+.mock-topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.mock-title { font-size: 1rem; font-weight: 700; }
+.mock-badge {
+  display: flex; align-items: center; gap: 5px; padding: 3px 10px;
+  background: var(--green-bg); border: 1px solid var(--green-border);
+  border-radius: 100px; font-size: 0.7rem; color: var(--green); font-weight: 600;
+}
+.mock-badge-dot { width: 5px; height: 5px; background: var(--green); border-radius: 50%; animation: pulse 2s infinite; }
+.mock-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 20px; }
+.mock-stat {
+  padding: 14px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  background: var(--bg-white);
+}
+.mock-stat-val { font-size: 1.35rem; font-weight: 700; line-height: 1; margin-bottom: 2px; }
+.mock-stat-lbl { font-size: 0.7rem; color: var(--text-muted); font-weight: 500; }
+.mock-feed { display: flex; flex-direction: column; gap: 6px; }
+.mock-feed-item {
+  display: flex; align-items: center; gap: 10px; padding: 8px 10px;
+  border-radius: 6px; font-size: 0.8rem; background: var(--bg);
+}
+.mock-avatar {
+  width: 28px; height: 28px; border-radius: 50%; display: flex;
+  align-items: center; justify-content: center; font-size: 0.65rem; font-weight: 700; flex-shrink: 0;
+}
+.mock-feed-text { flex: 1; color: var(--text-secondary); }
+.mock-feed-text strong { color: var(--text); font-weight: 600; }
+.mock-feed-time { font-size: 0.68rem; color: var(--text-muted); }
+
+/* === DIVIDER === */
+.divider {
+  border: none; border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+/* === SECTION === */
+.section {
+  padding: 100px 0;
+}
+.section-label {
+  font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--text-muted); margin-bottom: 12px;
+}
+.section-heading {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 500; letter-spacing: -0.02em;
+  line-height: 1.15; color: var(--text); margin-bottom: 12px;
+}
+.section-heading em { font-style: italic; font-weight: 400; }
+.section-desc {
+  font-size: 1rem; color: var(--text-secondary); max-width: 420px; line-height: 1.7;
+}
+
+/* === FEATURE GRID (Enginy-style) === */
+.feature-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.feature-card {
+  background: var(--bg-white); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 32px;
+  transition: box-shadow 0.2s;
+  display: flex; flex-direction: column;
+}
+.feature-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.feature-card-label {
+  font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.08em; margin-bottom: 10px;
+}
+.feature-card h3 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.4rem; font-weight: 500; letter-spacing: -0.01em;
+  line-height: 1.25; margin-bottom: 8px;
+}
+.feature-card p {
+  font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;
+  margin-bottom: 24px;
+}
+.feature-card-visual {
+  flex: 1; display: flex; align-items: flex-end;
+}
+
+/* Feature card inner visuals */
+.card-ui {
+  width: 100%; background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); overflow: hidden;
+}
+.card-ui-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 14px; border-bottom: 1px solid var(--border);
+  font-size: 0.75rem; font-weight: 600;
+}
+.card-ui-body { padding: 14px; }
+
+/* Sequence mini */
+.seq-mini { display: flex; flex-direction: column; gap: 0; }
+.seq-mini-step {
+  display: flex; align-items: center; gap: 10px; padding: 8px 10px;
+  border: 1px solid var(--border); border-radius: 6px;
+  background: var(--bg-white); font-size: 0.78rem;
+}
+.seq-mini-step:hover { border-color: var(--border-dark); }
+.seq-mini-icon {
+  width: 28px; height: 28px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center; font-size: 0.8rem; flex-shrink: 0;
+}
+.seq-mini-line { width: 1px; height: 12px; background: var(--border); margin-left: 23px; }
+.seq-mini-name { font-weight: 600; font-size: 0.78rem; }
+.seq-mini-desc { font-size: 0.68rem; color: var(--text-muted); }
+
+/* Score rows */
+.score-row {
+  display: flex; align-items: center; gap: 10px; padding: 8px 0;
+  border-bottom: 1px solid var(--border); font-size: 0.8rem;
+}
+.score-row:last-child { border-bottom: none; }
+.score-avatar {
+  width: 26px; height: 26px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.62rem; font-weight: 700; flex-shrink: 0;
+}
+.score-name { flex: 1; font-weight: 500; }
+.score-bar-wrap {
+  width: 60px; height: 4px; background: var(--bg-muted);
+  border-radius: 2px; overflow: hidden;
+}
+.score-bar { height: 100%; border-radius: 2px; }
+.score-val { font-size: 0.72rem; font-weight: 600; width: 24px; text-align: right; }
+
+/* Chart mini */
+.chart-mini { display: flex; align-items: flex-end; gap: 4px; height: 80px; padding-top: 8px; }
+.chart-mini-bar {
+  flex: 1; border-radius: 3px 3px 0 0; transition: height 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+.chart-mini-labels {
+  display: flex; justify-content: space-between;
+  font-size: 0.62rem; color: var(--text-muted); margin-top: 6px;
+}
+.kpi-mini { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+.kpi-mini-item {
+  text-align: center; padding: 8px; border: 1px solid var(--border);
+  border-radius: 6px; background: var(--bg-white);
+}
+.kpi-mini-val { font-size: 1rem; font-weight: 700; }
+.kpi-mini-lbl { font-size: 0.62rem; color: var(--text-muted); }
+
+/* Inbox mini */
+.inbox-mini { display: flex; flex-direction: column; gap: 6px; }
+.inbox-mini-msg {
+  display: flex; align-items: flex-start; gap: 10px; padding: 10px;
+  border: 1px solid var(--border); border-radius: 6px;
+  background: var(--bg-white); font-size: 0.78rem;
+}
+.inbox-mini-content { flex: 1; }
+.inbox-mini-name { font-weight: 600; font-size: 0.78rem; }
+.inbox-mini-preview { font-size: 0.72rem; color: var(--text-muted); margin-top: 1px; }
+.inbox-mini-time { font-size: 0.65rem; color: var(--text-muted); flex-shrink: 0; }
+.inbox-mini-tag {
+  display: inline-block; padding: 1px 6px; border-radius: 3px;
+  font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.03em; margin-top: 4px;
+}
+
+/* === FEATURE ROW (alternating text + visual) === */
+.feature-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+}
+.feature-row.reverse .feature-row-text { order: 2; }
+.feature-row.reverse .feature-row-visual { order: 1; }
+.feature-row-text { display: flex; flex-direction: column; gap: 12px; }
+.feature-row-points { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+.feature-row-point {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 0.9rem; color: var(--text-secondary); line-height: 1.5;
+}
+.point-marker {
+  width: 20px; height: 20px; border-radius: 5px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.7rem; flex-shrink: 0; margin-top: 2px;
+}
+
+/* === QUOTE === */
+.quote-block {
+  display: flex; align-items: flex-start; gap: 16px;
+  padding: 20px; background: var(--bg-white); border: 1px solid var(--border);
+  border-radius: var(--radius); margin-top: 24px;
+}
+.quote-avatar {
+  width: 40px; height: 40px; border-radius: 50%; background: var(--bg-muted);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; font-weight: 700; flex-shrink: 0; color: var(--text-secondary);
+}
+.quote-text {
+  font-size: 0.9rem; color: var(--text-secondary); font-style: italic; line-height: 1.5;
+}
+.quote-author {
+  font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; font-style: normal;
+}
+.quote-author strong { color: var(--text); font-weight: 600; }
+
+/* === COMPARISON === */
+.comp-table {
+  border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+  max-width: 720px; margin: 40px auto 0; background: var(--bg-white);
+}
+.comp-header {
+  display: grid; grid-template-columns: 1.2fr 1fr 1fr;
+  border-bottom: 1px solid var(--border); background: var(--bg-muted);
+}
+.comp-header div { padding: 12px 18px; font-weight: 600; font-size: 0.82rem; color: var(--text-secondary); }
+.comp-header .col-bb { color: var(--text); }
+.comp-row {
+  display: grid; grid-template-columns: 1.2fr 1fr 1fr;
+  border-bottom: 1px solid var(--border);
+}
+.comp-row:last-child { border-bottom: none; }
+.comp-row div {
+  padding: 12px 18px; font-size: 0.85rem; color: var(--text-secondary);
+  display: flex; align-items: center; gap: 6px;
+}
+.comp-row div:first-child { font-weight: 600; color: var(--text); }
+.comp-row .col-bb { font-weight: 600; color: var(--text); }
+.check { color: var(--green); } .cross { color: #ef4444; }
+
+/* === CTA === */
+.cta-section {
+  padding: 120px 24px; text-align: center;
+}
+.cta-section h2 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 500; letter-spacing: -0.02em;
+  line-height: 1.15; margin-bottom: 12px;
+}
+.cta-section h2 em { font-style: italic; font-weight: 400; }
+.cta-section p {
+  font-size: 1rem; color: var(--text-secondary); margin-bottom: 28px;
+  max-width: 440px; margin-left: auto; margin-right: auto; line-height: 1.7;
+}
+.cta-section .btn { padding: 14px 32px; font-size: 0.95rem; }
+
+/* === FOOTER === */
+footer {
+  padding: 48px 24px 32px; border-top: 1px solid var(--border);
+  max-width: 1120px; margin: 0 auto;
+}
+.footer-grid {
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+  gap: 40px; margin-bottom: 32px;
+}
+.footer-brand { max-width: 260px; }
+.footer-brand .logo { display: block; margin-bottom: 8px; }
+.footer-brand p { color: var(--text-muted); font-size: 0.82rem; line-height: 1.6; }
+.footer-cols { display: flex; gap: 56px; }
+.footer-col h4 {
+  font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--text-muted); margin-bottom: 12px; font-weight: 600;
+}
+.footer-col a {
+  display: block; color: var(--text-secondary); text-decoration: none;
+  font-size: 0.85rem; padding: 2px 0; transition: color 0.15s;
+}
+.footer-col a:hover { color: var(--text); }
+.footer-bottom {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: 16px; border-top: 1px solid var(--border);
+  font-size: 0.78rem; color: var(--text-muted);
+}
+
+/* === SCROLL REVEAL === */
+.reveal {
+  opacity: 0; transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .feature-grid { grid-template-columns: 1fr; }
+  .feature-row { grid-template-columns: 1fr; gap: 32px; }
+  .feature-row.reverse .feature-row-text { order: 1; }
+  .feature-row.reverse .feature-row-visual { order: 2; }
+  .mockup-body { grid-template-columns: 1fr; }
+  .mock-sidebar { display: none; }
+  .mock-stats { grid-template-columns: repeat(2, 1fr); }
+  nav .nav-links { display: none; }
+  .comp-header div, .comp-row div { padding: 10px 12px; font-size: 0.78rem; }
+  .footer-grid { flex-direction: column; }
+  .footer-cols { gap: 32px; }
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZVPMGVS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="logo"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="0" width="4" height="4" fill="#a5b4fc"/><rect x="16" y="0" width="4" height="4" fill="#818cf8"/><rect x="8" y="4" width="4" height="4" fill="#c7d2fe"/><rect x="12" y="4" width="4" height="4" fill="#a5b4fc"/><rect x="16" y="4" width="4" height="4" fill="#818cf8"/><rect x="20" y="4" width="4" height="4" fill="#6366f1"/><rect x="4" y="8" width="4" height="4" fill="#a5b4fc"/><rect x="8" y="8" width="4" height="4" fill="#c7d2fe"/><rect x="12" y="8" width="4" height="4" fill="#e0e7ff"/><rect x="16" y="8" width="4" height="4" fill="#a5b4fc"/><rect x="20" y="8" width="4" height="4" fill="#6366f1"/><rect x="24" y="8" width="4" height="4" fill="#4f46e5"/><rect x="4" y="12" width="4" height="4" fill="#818cf8"/><rect x="8" y="12" width="4" height="4" fill="#a5b4fc"/><rect x="12" y="12" width="4" height="4" fill="#818cf8"/><rect x="16" y="12" width="4" height="4" fill="#7c3aed"/><rect x="20" y="12" width="4" height="4" fill="#6366f1"/><rect x="24" y="12" width="4" height="4" fill="#4338ca"/><rect x="4" y="16" width="4" height="4" fill="#6366f1"/><rect x="8" y="16" width="4" height="4" fill="#818cf8"/><rect x="12" y="16" width="4" height="4" fill="#6366f1"/><rect x="16" y="16" width="4" height="4" fill="#5b21b6"/><rect x="20" y="16" width="4" height="4" fill="#4f46e5"/><rect x="24" y="16" width="4" height="4" fill="#3730a3"/><rect x="4" y="20" width="4" height="4" fill="#4f46e5"/><rect x="8" y="20" width="4" height="4" fill="#6366f1"/><rect x="12" y="20" width="4" height="4" fill="#4f46e5"/><rect x="16" y="20" width="4" height="4" fill="#4338ca"/><rect x="20" y="20" width="4" height="4" fill="#3730a3"/><rect x="24" y="20" width="4" height="4" fill="#312e81"/><rect x="8" y="24" width="4" height="4" fill="#4338ca"/><rect x="12" y="24" width="4" height="4" fill="#3730a3"/><rect x="16" y="24" width="4" height="4" fill="#312e81"/><rect x="20" y="24" width="4" height="4" fill="#312e81"/><rect x="12" y="28" width="4" height="4" fill="#312e81"/><rect x="16" y="28" width="4" height="4" fill="#1e1b4b"/></svg>boundbird</a>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="/pricing.html">Pricing</a></li>
+    <li><a href="/blog/">Blog</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://cal.com/rubitec/30min" class="btn btn-primary">Book a demo</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-label"><span class="hero-dot"></span> Now in early access</div>
+  <h1>Outreach that <em>lands clients</em></h1>
+  <p>AI-powered prospecting, automatic lead scoring, and multi-step sequences. Built for agency owners and CEOs who need a full pipeline.</p>
+  <div class="hero-buttons">
+    <a href="https://cal.com/rubitec/30min" class="btn btn-primary">
+      Book a demo
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <a href="#features" class="btn btn-secondary">See how it works</a>
+  </div>
+</section>
+
+<!-- HERO MOCKUP -->
+<div class="mockup-wrapper reveal">
+  <div class="mockup">
+    <div class="mockup-bar">
+      <div class="mockup-dot dot-r"></div>
+      <div class="mockup-dot dot-y"></div>
+      <div class="mockup-dot dot-g"></div>
+      <div class="mockup-url">app.boundbird.ai/campaigns</div>
+    </div>
+    <div class="mockup-body">
+      <div class="mock-sidebar">
+        <div class="mock-nav active"><span>📊</span> Dashboard</div>
+        <div class="mock-nav"><span>🎯</span> Campaigns</div>
+        <div class="mock-nav"><span>👥</span> Prospects</div>
+        <div class="mock-divider">Engage</div>
+        <div class="mock-nav"><span>💬</span> Sequences</div>
+        <div class="mock-nav"><span>📥</span> Inbox</div>
+        <div class="mock-divider">Settings</div>
+        <div class="mock-nav"><span>⚙️</span> Account</div>
+      </div>
+      <div class="mock-main">
+        <div class="mock-topbar">
+          <div class="mock-title">Agency CEOs - EU</div>
+          <div class="mock-badge"><span class="mock-badge-dot"></span> Running</div>
+        </div>
+        <div class="mock-stats">
+          <div class="mock-stat"><div class="mock-stat-val">312</div><div class="mock-stat-lbl">Sent</div></div>
+          <div class="mock-stat"><div class="mock-stat-val" style="color:var(--green)">127</div><div class="mock-stat-lbl">Accepted</div></div>
+          <div class="mock-stat"><div class="mock-stat-val" style="color:var(--orange)">48</div><div class="mock-stat-lbl">Replied</div></div>
+          <div class="mock-stat"><div class="mock-stat-val" style="color:var(--blue)">37%</div><div class="mock-stat-lbl">Reply Rate</div></div>
+        </div>
+        <div class="mock-feed">
+          <div class="mock-feed-item">
+            <div class="mock-avatar" style="background:var(--blue-bg);color:var(--blue);">JM</div>
+            <div class="mock-feed-text"><strong>Julia M.</strong> accepted your connection</div>
+            <div class="mock-feed-time">2m ago</div>
+          </div>
+          <div class="mock-feed-item">
+            <div class="mock-avatar" style="background:var(--green-bg);color:var(--green);">DK</div>
+            <div class="mock-feed-text"><strong>Daniel K.</strong> replied to your message</div>
+            <div class="mock-feed-time">8m ago</div>
+          </div>
+          <div class="mock-feed-item">
+            <div class="mock-avatar" style="background:var(--orange-bg);color:var(--orange);">SR</div>
+            <div class="mock-feed-text"><strong>Sara R.</strong> accepted your connection</div>
+            <div class="mock-feed-time">14m ago</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES: 2x2 GRID (Enginy-style) -->
+<section class="section" id="features">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;" class="reveal">
+      <div class="section-label">What Boundbird does</div>
+      <h2 class="section-heading">Everything your team needs<br>to <em>fill the pipeline</em></h2>
+    </div>
+    <div class="feature-grid">
+
+      <!-- Card 1: Sequences -->
+      <div class="feature-card reveal">
+        <div class="feature-card-label" style="color:var(--blue);">Sequences</div>
+        <h3>Outreach on autopilot</h3>
+        <p>Multi-step LinkedIn sequences with smart delays and AI-written messages. Set it once, book calls all week.</p>
+        <div class="feature-card-visual">
+          <div class="card-ui">
+            <div class="card-ui-header">
+              <span>Sequence Builder</span>
+              <span style="color:var(--text-muted);font-weight:500;">3 steps</span>
+            </div>
+            <div class="card-ui-body">
+              <div class="seq-mini">
+                <div class="seq-mini-step">
+                  <div class="seq-mini-icon" style="background:var(--blue-bg);color:var(--blue);">🔗</div>
+                  <div><div class="seq-mini-name">Send connection</div><div class="seq-mini-desc">Personalized note with {first_name}</div></div>
+                </div>
+                <div class="seq-mini-line"></div>
+                <div class="seq-mini-step">
+                  <div class="seq-mini-icon" style="background:var(--orange-bg);color:var(--orange);">⏳</div>
+                  <div><div class="seq-mini-name">Wait 2 days</div><div class="seq-mini-desc">Or until accepted</div></div>
+                </div>
+                <div class="seq-mini-line"></div>
+                <div class="seq-mini-step">
+                  <div class="seq-mini-icon" style="background:var(--green-bg);color:var(--green);">✉️</div>
+                  <div><div class="seq-mini-name">Follow-up message</div><div class="seq-mini-desc">AI-personalized intro</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: AI Lead Scoring -->
+      <div class="feature-card reveal">
+        <div class="feature-card-label" style="color:var(--green);">AI-Powered</div>
+        <h3>Leads scored automatically</h3>
+        <p>Boundbird's AI scores every prospect by ICP fit, activity, and company data. Focus on who's most likely to close.</p>
+        <div class="feature-card-visual">
+          <div class="card-ui">
+            <div class="card-ui-header">
+              <span>Lead Scoring</span>
+              <span style="color:var(--green);font-weight:500;">247 scored</span>
+            </div>
+            <div class="card-ui-body">
+              <div class="score-row">
+                <div class="score-avatar" style="background:var(--blue-bg);color:var(--blue);">JR</div>
+                <div class="score-name">Julia Rodriguez</div>
+                <div class="score-bar-wrap"><div class="score-bar" style="width:94%;background:var(--green);"></div></div>
+                <div class="score-val" style="color:var(--green);">94</div>
+              </div>
+              <div class="score-row">
+                <div class="score-avatar" style="background:var(--orange-bg);color:var(--orange);">PL</div>
+                <div class="score-name">Pablo Lopez</div>
+                <div class="score-bar-wrap"><div class="score-bar" style="width:87%;background:var(--green);"></div></div>
+                <div class="score-val" style="color:var(--green);">87</div>
+              </div>
+              <div class="score-row">
+                <div class="score-avatar" style="background:var(--green-bg);color:var(--green);">AM</div>
+                <div class="score-name">Anna Muller</div>
+                <div class="score-bar-wrap"><div class="score-bar" style="width:72%;background:var(--orange);"></div></div>
+                <div class="score-val" style="color:var(--orange);">72</div>
+              </div>
+              <div class="score-row">
+                <div class="score-avatar" style="background:var(--bg-muted);color:var(--text-muted);">MT</div>
+                <div class="score-name">Marco Torres</div>
+                <div class="score-bar-wrap"><div class="score-bar" style="width:65%;background:var(--text-muted);"></div></div>
+                <div class="score-val">65</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Analytics -->
+      <div class="feature-card reveal">
+        <div class="feature-card-label" style="color:var(--orange);">Analytics</div>
+        <h3>See what converts</h3>
+        <p>Track acceptance, reply, and booked-call rates across every campaign. Double down on what works.</p>
+        <div class="feature-card-visual">
+          <div class="card-ui">
+            <div class="card-ui-header">
+              <span>Campaign Performance</span>
+              <span style="color:var(--text-muted);font-weight:500;">Last 7 days</span>
+            </div>
+            <div class="card-ui-body">
+              <div class="chart-mini" id="chartBars"></div>
+              <div class="chart-mini-labels">
+                <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+              </div>
+              <div class="kpi-mini">
+                <div class="kpi-mini-item"><div class="kpi-mini-val">41%</div><div class="kpi-mini-lbl">Acceptance</div></div>
+                <div class="kpi-mini-item"><div class="kpi-mini-val" style="color:var(--green);">37%</div><div class="kpi-mini-lbl">Reply Rate</div></div>
+                <div class="kpi-mini-item"><div class="kpi-mini-val" style="color:var(--orange);">8</div><div class="kpi-mini-lbl">Calls Booked</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Inbox -->
+      <div class="feature-card reveal">
+        <div class="feature-card-label" style="color:var(--text-secondary);">Inbox</div>
+        <h3>Every reply, one place</h3>
+        <p>All LinkedIn conversations in a single inbox. No more switching between tabs to follow up.</p>
+        <div class="feature-card-visual">
+          <div class="card-ui">
+            <div class="card-ui-header">
+              <span>Inbox</span>
+              <span style="color:var(--orange);font-weight:500;">3 new</span>
+            </div>
+            <div class="card-ui-body">
+              <div class="inbox-mini">
+                <div class="inbox-mini-msg">
+                  <div class="score-avatar" style="background:var(--green-bg);color:var(--green);">DK</div>
+                  <div class="inbox-mini-content">
+                    <div class="inbox-mini-name">Daniel Klein</div>
+                    <div class="inbox-mini-preview">Sure, let's set up a call next week...</div>
+                    <div class="inbox-mini-tag" style="background:var(--green-bg);color:var(--green);">Hot lead</div>
+                  </div>
+                  <div class="inbox-mini-time">2m</div>
+                </div>
+                <div class="inbox-mini-msg">
+                  <div class="score-avatar" style="background:var(--blue-bg);color:var(--blue);">JR</div>
+                  <div class="inbox-mini-content">
+                    <div class="inbox-mini-name">Julia Rodriguez</div>
+                    <div class="inbox-mini-preview">Thanks for connecting! What do you...</div>
+                    <div class="inbox-mini-tag" style="background:var(--blue-bg);color:var(--blue);">Interested</div>
+                  </div>
+                  <div class="inbox-mini-time">18m</div>
+                </div>
+                <div class="inbox-mini-msg">
+                  <div class="score-avatar" style="background:var(--bg-muted);color:var(--text-muted);">SR</div>
+                  <div class="inbox-mini-content">
+                    <div class="inbox-mini-name">Sara Ruiz</div>
+                    <div class="inbox-mini-preview">Can you send more info about your...</div>
+                    <div class="inbox-mini-tag" style="background:var(--orange-bg);color:var(--orange);">Follow up</div>
+                  </div>
+                  <div class="inbox-mini-time">1h</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- AI DEEP DIVE -->
+<section class="section">
+  <div class="container">
+    <div class="feature-row reveal">
+      <div class="feature-row-text">
+        <div class="section-label">How the AI works</div>
+        <h2 class="section-heading">Your best researcher,<br><em>working 24/7</em></h2>
+        <p class="section-desc">Boundbird researches every prospect before you reach out. Company size, recent posts, tech stack, hiring signals. Then it scores them and writes a message that actually sounds human.</p>
+        <div class="feature-row-points">
+          <div class="feature-row-point">
+            <div class="point-marker" style="background:var(--green-bg);color:var(--green);">✓</div>
+            <span>Automatic ICP scoring based on your ideal client profile</span>
+          </div>
+          <div class="feature-row-point">
+            <div class="point-marker" style="background:var(--blue-bg);color:var(--blue);">✓</div>
+            <span>Prospect research pulled from LinkedIn, company data, and news</span>
+          </div>
+          <div class="feature-row-point">
+            <div class="point-marker" style="background:var(--orange-bg);color:var(--orange);">✓</div>
+            <span>AI-written messages personalized per prospect, not just {first_name}</span>
+          </div>
+        </div>
+        <div class="quote-block">
+          <div class="quote-avatar">MC</div>
+          <div>
+            <div class="quote-text">"Replaced our entire cold outreach process. We booked 12 discovery calls in the first week."</div>
+            <div class="quote-author"><strong>Marc C.</strong> · Marketing Agency, Barcelona</div>
+          </div>
+        </div>
+      </div>
+      <div class="feature-row-visual">
+        <div class="card-ui">
+          <div class="card-ui-header">
+            <span>AI Research - Julia Rodriguez</span>
+            <span style="color:var(--green);font-weight:500;">Score: 94</span>
+          </div>
+          <div class="card-ui-body" style="font-size:0.8rem;">
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div>
+                <div style="font-weight:600;margin-bottom:4px;">Company</div>
+                <div style="color:var(--text-secondary);">Kreativa Digital · 12 employees · Marketing Agency</div>
+              </div>
+              <div style="border-top:1px solid var(--border);padding-top:12px;">
+                <div style="font-weight:600;margin-bottom:4px;">Signals</div>
+                <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                  <span style="padding:2px 8px;background:var(--green-bg);border:1px solid var(--green-border);border-radius:4px;font-size:0.7rem;font-weight:600;color:var(--green);">Hiring</span>
+                  <span style="padding:2px 8px;background:var(--blue-bg);border:1px solid var(--blue-border);border-radius:4px;font-size:0.7rem;font-weight:600;color:var(--blue);">Active poster</span>
+                  <span style="padding:2px 8px;background:var(--orange-bg);border:1px solid var(--orange-border);border-radius:4px;font-size:0.7rem;font-weight:600;color:var(--orange);">Growing team</span>
+                </div>
+              </div>
+              <div style="border-top:1px solid var(--border);padding-top:12px;">
+                <div style="font-weight:600;margin-bottom:4px;">AI message draft</div>
+                <div style="color:var(--text-secondary);background:var(--bg-muted);padding:10px;border-radius:6px;font-size:0.78rem;line-height:1.5;">
+                  Hi Julia, I noticed Kreativa is growing the team - congrats on the momentum. We help marketing agencies like yours automate prospecting so your team can focus on client work. Would a quick chat make sense?
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- COMPARISON -->
+<section class="section" id="compare">
+  <div class="container">
+    <div style="text-align:center;" class="reveal">
+      <div class="section-label">Compare</div>
+      <h2 class="section-heading">Why agencies <em>switch to Boundbird</em></h2>
+      <p style="color:var(--text-secondary);max-width:440px;margin:8px auto 0;line-height:1.7;">Enterprise tools weren't built for your team. Boundbird was.</p>
+    </div>
+    <div class="comp-table reveal">
+      <div class="comp-header">
+        <div>Feature</div>
+        <div class="col-bb">Boundbird</div>
+        <div>Enterprise tools</div>
+      </div>
+      <div class="comp-row">
+        <div>Setup time</div>
+        <div class="col-bb"><span class="check">✓</span> 5 minutes</div>
+        <div>Hours to days</div>
+      </div>
+      <div class="comp-row">
+        <div>AI lead scoring</div>
+        <div class="col-bb"><span class="check">✓</span> Built-in</div>
+        <div><span class="cross">✗</span> Add-on or missing</div>
+      </div>
+      <div class="comp-row">
+        <div>AI-written messages</div>
+        <div class="col-bb"><span class="check">✓</span> Included</div>
+        <div><span class="cross">✗</span> Templates only</div>
+      </div>
+      <div class="comp-row">
+        <div>Annual contract</div>
+        <div class="col-bb"><span class="check">✓</span> No lock-in</div>
+        <div>Usually required</div>
+      </div>
+      <div class="comp-row">
+        <div>Built for agencies + SMBs</div>
+        <div class="col-bb"><span class="check">✓</span> Yes</div>
+        <div><span class="cross">✗</span> Enterprise focus</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FINAL CTA -->
+<section class="cta-section">
+  <div class="reveal">
+    <div class="section-label" style="text-align:center;">Get started</div>
+    <h2>Ready to land your<br>next <em>client</em>?</h2>
+    <p>Agency owners and CEOs use Boundbird to fill their pipeline with AI-scored leads and automated outreach.</p>
+    <a href="https://cal.com/rubitec/30min" class="btn btn-primary" style="padding:14px 32px;font-size:0.95rem;">
+      Book a demo
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="logo"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="0" width="4" height="4" fill="#a5b4fc"/><rect x="16" y="0" width="4" height="4" fill="#818cf8"/><rect x="8" y="4" width="4" height="4" fill="#c7d2fe"/><rect x="12" y="4" width="4" height="4" fill="#a5b4fc"/><rect x="16" y="4" width="4" height="4" fill="#818cf8"/><rect x="20" y="4" width="4" height="4" fill="#6366f1"/><rect x="4" y="8" width="4" height="4" fill="#a5b4fc"/><rect x="8" y="8" width="4" height="4" fill="#c7d2fe"/><rect x="12" y="8" width="4" height="4" fill="#e0e7ff"/><rect x="16" y="8" width="4" height="4" fill="#a5b4fc"/><rect x="20" y="8" width="4" height="4" fill="#6366f1"/><rect x="24" y="8" width="4" height="4" fill="#4f46e5"/><rect x="4" y="12" width="4" height="4" fill="#818cf8"/><rect x="8" y="12" width="4" height="4" fill="#a5b4fc"/><rect x="12" y="12" width="4" height="4" fill="#818cf8"/><rect x="16" y="12" width="4" height="4" fill="#7c3aed"/><rect x="20" y="12" width="4" height="4" fill="#6366f1"/><rect x="24" y="12" width="4" height="4" fill="#4338ca"/><rect x="4" y="16" width="4" height="4" fill="#6366f1"/><rect x="8" y="16" width="4" height="4" fill="#818cf8"/><rect x="12" y="16" width="4" height="4" fill="#6366f1"/><rect x="16" y="16" width="4" height="4" fill="#5b21b6"/><rect x="20" y="16" width="4" height="4" fill="#4f46e5"/><rect x="24" y="16" width="4" height="4" fill="#3730a3"/><rect x="4" y="20" width="4" height="4" fill="#4f46e5"/><rect x="8" y="20" width="4" height="4" fill="#6366f1"/><rect x="12" y="20" width="4" height="4" fill="#4f46e5"/><rect x="16" y="20" width="4" height="4" fill="#4338ca"/><rect x="20" y="20" width="4" height="4" fill="#3730a3"/><rect x="24" y="20" width="4" height="4" fill="#312e81"/><rect x="8" y="24" width="4" height="4" fill="#4338ca"/><rect x="12" y="24" width="4" height="4" fill="#3730a3"/><rect x="16" y="24" width="4" height="4" fill="#312e81"/><rect x="20" y="24" width="4" height="4" fill="#312e81"/><rect x="12" y="28" width="4" height="4" fill="#312e81"/><rect x="16" y="28" width="4" height="4" fill="#1e1b4b"/></svg>boundbird</a>
+      <p>AI-powered LinkedIn outreach for agencies and small companies that need a full pipeline.</p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="/#features">Features</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="#">Changelog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Boundbird. All rights reserved.</span>
+    <span>Made in Barcelona</span>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Chart bars
+const bars = [65, 48, 82, 55, 90, 35, 70];
+const container = document.getElementById('chartBars');
+bars.forEach((h, i) => {
+  const bar = document.createElement('div');
+  bar.className = 'chart-mini-bar';
+  bar.style.background = i === 4 ? 'var(--text)' : 'var(--border-dark)';
+  bar.style.height = '0%';
+  container.appendChild(bar);
+  setTimeout(() => { bar.style.height = h + '%'; }, 300 + i * 80);
+});
+
+const chartObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const barEls = container.querySelectorAll('.chart-mini-bar');
+      barEls.forEach((b, i) => {
+        b.style.height = '0%';
+        setTimeout(() => { b.style.height = bars[i] + '%'; }, 100 + i * 80);
+      });
+    }
+  });
+}, { threshold: 0.3 });
+chartObs.observe(container);
+</script>
+</body>
+</html>
