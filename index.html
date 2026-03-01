@@ -64,7 +64,9 @@ nav {
   font-family: 'Newsreader', Georgia, serif;
   font-weight: 600; font-size: 1.2rem; color: var(--text);
   text-decoration: none; letter-spacing: -0.02em;
+  display: inline-flex; align-items: center; gap: 7px;
 }
+.logo svg { width: 20px; height: 20px; flex-shrink: 0; }
 .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
 .nav-links a {
   color: var(--text-secondary); text-decoration: none;
@@ -461,7 +463,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- NAV -->
 <nav>
-  <a href="/" class="logo">boundbird</a>
+  <a href="/" class="logo"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="0" width="4" height="4" fill="#a5b4fc"/><rect x="16" y="0" width="4" height="4" fill="#818cf8"/><rect x="8" y="4" width="4" height="4" fill="#c7d2fe"/><rect x="12" y="4" width="4" height="4" fill="#a5b4fc"/><rect x="16" y="4" width="4" height="4" fill="#818cf8"/><rect x="20" y="4" width="4" height="4" fill="#6366f1"/><rect x="4" y="8" width="4" height="4" fill="#a5b4fc"/><rect x="8" y="8" width="4" height="4" fill="#c7d2fe"/><rect x="12" y="8" width="4" height="4" fill="#e0e7ff"/><rect x="16" y="8" width="4" height="4" fill="#a5b4fc"/><rect x="20" y="8" width="4" height="4" fill="#6366f1"/><rect x="24" y="8" width="4" height="4" fill="#4f46e5"/><rect x="4" y="12" width="4" height="4" fill="#818cf8"/><rect x="8" y="12" width="4" height="4" fill="#a5b4fc"/><rect x="12" y="12" width="4" height="4" fill="#818cf8"/><rect x="16" y="12" width="4" height="4" fill="#7c3aed"/><rect x="20" y="12" width="4" height="4" fill="#6366f1"/><rect x="24" y="12" width="4" height="4" fill="#4338ca"/><rect x="4" y="16" width="4" height="4" fill="#6366f1"/><rect x="8" y="16" width="4" height="4" fill="#818cf8"/><rect x="12" y="16" width="4" height="4" fill="#6366f1"/><rect x="16" y="16" width="4" height="4" fill="#5b21b6"/><rect x="20" y="16" width="4" height="4" fill="#4f46e5"/><rect x="24" y="16" width="4" height="4" fill="#3730a3"/><rect x="4" y="20" width="4" height="4" fill="#4f46e5"/><rect x="8" y="20" width="4" height="4" fill="#6366f1"/><rect x="12" y="20" width="4" height="4" fill="#4f46e5"/><rect x="16" y="20" width="4" height="4" fill="#4338ca"/><rect x="20" y="20" width="4" height="4" fill="#3730a3"/><rect x="24" y="20" width="4" height="4" fill="#312e81"/><rect x="8" y="24" width="4" height="4" fill="#4338ca"/><rect x="12" y="24" width="4" height="4" fill="#3730a3"/><rect x="16" y="24" width="4" height="4" fill="#312e81"/><rect x="20" y="24" width="4" height="4" fill="#312e81"/><rect x="12" y="28" width="4" height="4" fill="#312e81"/><rect x="16" y="28" width="4" height="4" fill="#1e1b4b"/></svg>boundbird</a>
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
     <li><a href="/pricing.html">Pricing</a></li>
@@ -515,7 +517,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="mock-stat"><div class="mock-stat-val">312</div><div class="mock-stat-lbl">Sent</div></div>
           <div class="mock-stat"><div class="mock-stat-val" style="color:var(--green)">127</div><div class="mock-stat-lbl">Accepted</div></div>
           <div class="mock-stat"><div class="mock-stat-val" style="color:var(--orange)">48</div><div class="mock-stat-lbl">Replied</div></div>
-          <div class="mock-stat"><div class="mock-stat-val" style="color:var(--blue)">15.4%</div><div class="mock-stat-lbl">Reply Rate</div></div>
+          <div class="mock-stat"><div class="mock-stat-val" style="color:var(--blue)">37%</div><div class="mock-stat-lbl">Reply Rate</div></div>
         </div>
         <div class="mock-feed">
           <div class="mock-feed-item">
@@ -640,7 +642,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </div>
               <div class="kpi-mini">
                 <div class="kpi-mini-item"><div class="kpi-mini-val">41%</div><div class="kpi-mini-lbl">Acceptance</div></div>
-                <div class="kpi-mini-item"><div class="kpi-mini-val" style="color:var(--green);">15.4%</div><div class="kpi-mini-lbl">Reply Rate</div></div>
+                <div class="kpi-mini-item"><div class="kpi-mini-val" style="color:var(--green);">37%</div><div class="kpi-mini-lbl">Reply Rate</div></div>
                 <div class="kpi-mini-item"><div class="kpi-mini-val" style="color:var(--orange);">8</div><div class="kpi-mini-lbl">Calls Booked</div></div>
               </div>
             </div>
@@ -828,7 +830,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="/" class="logo">boundbird</a>
+      <a href="/" class="logo"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="0" width="4" height="4" fill="#a5b4fc"/><rect x="16" y="0" width="4" height="4" fill="#818cf8"/><rect x="8" y="4" width="4" height="4" fill="#c7d2fe"/><rect x="12" y="4" width="4" height="4" fill="#a5b4fc"/><rect x="16" y="4" width="4" height="4" fill="#818cf8"/><rect x="20" y="4" width="4" height="4" fill="#6366f1"/><rect x="4" y="8" width="4" height="4" fill="#a5b4fc"/><rect x="8" y="8" width="4" height="4" fill="#c7d2fe"/><rect x="12" y="8" width="4" height="4" fill="#e0e7ff"/><rect x="16" y="8" width="4" height="4" fill="#a5b4fc"/><rect x="20" y="8" width="4" height="4" fill="#6366f1"/><rect x="24" y="8" width="4" height="4" fill="#4f46e5"/><rect x="4" y="12" width="4" height="4" fill="#818cf8"/><rect x="8" y="12" width="4" height="4" fill="#a5b4fc"/><rect x="12" y="12" width="4" height="4" fill="#818cf8"/><rect x="16" y="12" width="4" height="4" fill="#7c3aed"/><rect x="20" y="12" width="4" height="4" fill="#6366f1"/><rect x="24" y="12" width="4" height="4" fill="#4338ca"/><rect x="4" y="16" width="4" height="4" fill="#6366f1"/><rect x="8" y="16" width="4" height="4" fill="#818cf8"/><rect x="12" y="16" width="4" height="4" fill="#6366f1"/><rect x="16" y="16" width="4" height="4" fill="#5b21b6"/><rect x="20" y="16" width="4" height="4" fill="#4f46e5"/><rect x="24" y="16" width="4" height="4" fill="#3730a3"/><rect x="4" y="20" width="4" height="4" fill="#4f46e5"/><rect x="8" y="20" width="4" height="4" fill="#6366f1"/><rect x="12" y="20" width="4" height="4" fill="#4f46e5"/><rect x="16" y="20" width="4" height="4" fill="#4338ca"/><rect x="20" y="20" width="4" height="4" fill="#3730a3"/><rect x="24" y="20" width="4" height="4" fill="#312e81"/><rect x="8" y="24" width="4" height="4" fill="#4338ca"/><rect x="12" y="24" width="4" height="4" fill="#3730a3"/><rect x="16" y="24" width="4" height="4" fill="#312e81"/><rect x="20" y="24" width="4" height="4" fill="#312e81"/><rect x="12" y="28" width="4" height="4" fill="#312e81"/><rect x="16" y="28" width="4" height="4" fill="#1e1b4b"/></svg>boundbird</a>
       <p>AI-powered LinkedIn outreach for agencies and small companies that need a full pipeline.</p>
     </div>
     <div class="footer-cols">
