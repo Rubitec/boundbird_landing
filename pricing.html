@@ -74,30 +74,9 @@ nav {
 .pricing-hero h1 em { font-style: italic; font-weight: 400; }
 .pricing-hero p { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.7; }
 
-.toggle-wrap { display: flex; justify-content: center; margin-bottom: 48px; }
-.toggle {
-  display: flex; background: var(--bg-muted); border: 1px solid var(--border);
-  border-radius: 10px; padding: 3px; gap: 2px;
-}
-.toggle button {
-  padding: 8px 20px; border: none; border-radius: 8px;
-  font-size: 0.85rem; font-weight: 600; cursor: pointer;
-  background: transparent; color: var(--text-muted); transition: all 0.2s;
-}
-.toggle button.active {
-  background: var(--bg-white); color: var(--text);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-}
-.save-badge {
-  display: inline-block; padding: 1px 6px; background: var(--green-bg);
-  border: 1px solid var(--green-border); border-radius: 4px;
-  font-size: 0.68rem; color: var(--green); font-weight: 700;
-  margin-left: 6px; vertical-align: middle;
-}
-
 .pricing-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr);
-  gap: 16px; max-width: 740px; margin: 0 auto; padding: 0 24px;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; max-width: 960px; margin: 0 auto; padding: 0 24px;
 }
 .price-card {
   background: var(--bg-white); border: 1px solid var(--border);
@@ -130,6 +109,7 @@ nav {
   padding: 5px 0; font-size: 0.85rem; color: var(--text-secondary);
 }
 .tier-features .ck { color: var(--green); flex-shrink: 0; font-size: 0.9rem; margin-top: 1px; }
+.tier-features .locked { color: var(--text-muted); flex-shrink: 0; font-size: 0.9rem; margin-top: 1px; }
 .btn-tier {
   width: 100%; padding: 11px; border-radius: 8px; font-size: 0.875rem;
   font-weight: 600; cursor: pointer; text-align: center;
@@ -139,41 +119,32 @@ nav {
 .btn-tier.primary:hover { background: var(--accent-hover); }
 .btn-tier.outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
 .btn-tier.outline:hover { background: var(--bg-muted); border-color: var(--border-dark); }
+.setup-fee {
+  font-size: 0.78rem; color: var(--text-muted); text-align: center;
+  margin-top: 12px; line-height: 1.4;
+}
 
-.comp-section { max-width: 1000px; margin: 80px auto 0; padding: 0 24px; }
-.comp-section h2 {
-  font-family: 'Newsreader', Georgia, serif;
-  font-size: 1.75rem; font-weight: 500; text-align: center;
-  margin-bottom: 32px; letter-spacing: -0.02em;
+/* Custom tier card */
+.custom-card-wrapper {
+  max-width: 960px; margin: 16px auto 0; padding: 0 24px;
 }
-.comp-table {
-  border: 1px solid var(--border); border-radius: var(--radius);
-  overflow: hidden; background: var(--bg-white);
+.price-card.custom {
+  border: 2px solid var(--accent); background: var(--bg-white);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+  padding: 32px;
 }
-.comp-header {
-  display: grid; grid-template-columns: 1.5fr repeat(2, 1fr);
-  border-bottom: 1px solid var(--border); background: var(--bg-muted);
+.custom-left { display: flex; flex-direction: column; }
+.custom-right { display: flex; flex-direction: column; justify-content: center; }
+
+.pricing-notes {
+  max-width: 960px; margin: 40px auto 0; padding: 0 24px;
 }
-.comp-header div { padding: 12px 18px; font-weight: 600; font-size: 0.82rem; color: var(--text-secondary); }
-.comp-row {
-  display: grid; grid-template-columns: 1.5fr repeat(2, 1fr);
-  border-bottom: 1px solid var(--border);
+.pricing-note {
+  font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;
+  padding: 16px 20px; background: var(--bg-white); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); margin-bottom: 12px;
 }
-.comp-row:last-child { border-bottom: none; }
-.comp-row div {
-  padding: 11px 18px; font-size: 0.84rem; color: var(--text-secondary);
-  display: flex; align-items: center; justify-content: center;
-}
-.comp-row div:first-child { justify-content: flex-start; font-weight: 500; color: var(--text); }
-.check { color: var(--green); } .cross { color: var(--text-muted); }
-.comp-cat {
-  display: grid; grid-template-columns: 1.5fr repeat(2, 1fr);
-  border-bottom: 1px solid var(--border); background: var(--bg);
-}
-.comp-cat div {
-  padding: 10px 18px; font-size: 0.75rem; font-weight: 600;
-  text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted);
-}
+.pricing-note strong { color: var(--text); }
 
 .faq-section { max-width: 640px; margin: 80px auto 0; padding: 0 24px; }
 .faq-section h2 {
@@ -193,7 +164,7 @@ nav {
   max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease;
   padding-top: 0;
 }
-.faq-item.open .faq-a { max-height: 200px; padding-top: 10px; }
+.faq-item.open .faq-a { max-height: 300px; padding-top: 10px; }
 
 .cta-section { padding: 100px 24px; text-align: center; }
 .cta-section h2 {
@@ -223,9 +194,7 @@ footer {
 
 @media (max-width: 768px) {
   .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
-  .comp-header, .comp-row, .comp-cat { font-size: 0.72rem; }
-  .comp-header div, .comp-row div, .comp-cat div { padding: 8px 10px; }
-  .comp-header, .comp-row, .comp-cat { grid-template-columns: 1.5fr repeat(2, 1fr); }
+  .price-card.custom { grid-template-columns: 1fr; }
   nav .nav-links { display: none; }
   .footer-grid { flex-direction: column; }
   .footer-cols { gap: 32px; }
@@ -247,112 +216,141 @@ footer {
 </nav>
 
 <section class="pricing-hero">
-  <h1>Simple pricing,<br><em>no surprises</em></h1>
-  <p>Plans built for agencies and small teams. 7-day free trial on every plan.</p>
+  <h1>All-inclusive pricing,<br><em>no surprises</em></h1>
+  <p>Monthly plans that include everything: AI usage, WhatsApp messaging costs, hosting, maintenance, and ongoing improvements.</p>
 </section>
 
-<div class="toggle-wrap">
-  <div class="toggle">
-    <button class="active" data-period="monthly">Monthly</button>
-    <button data-period="annual">Annual <span class="save-badge">Save 20%</span></button>
-  </div>
-</div>
-
+<!-- THREE MAIN TIERS -->
 <div class="pricing-grid">
+
+  <!-- Básico -->
+  <div class="price-card">
+    <div class="tier-name">Básico</div>
+    <div class="tier-price">&euro;149 <span class="period">/mo</span></div>
+    <div class="tier-desc">1,000 messages/month. Perfect for getting started with WhatsApp automation.</div>
+    <ul class="tier-features">
+      <li><span class="ck">✓</span> 1,000 messages included</li>
+      <li><span class="ck">✓</span> 1 WhatsApp bot</li>
+      <li><span class="locked">—</span> Voice bots (coming soon)</li>
+      <li><span class="locked">—</span> Phone numbers not included</li>
+      <li><span class="locked">—</span> Integrations not included</li>
+      <li><span class="ck">✓</span> Conversation dashboard</li>
+      <li><span class="ck">✓</span> Email support</li>
+    </ul>
+    <a href="https://cal.com/rubitec/30min" class="btn-tier outline">Get started</a>
+    <div class="setup-fee">&euro;500 one-time setup fee</div>
+  </div>
+
+  <!-- Estándar -->
   <div class="price-card featured">
     <div class="featured-tag">Most popular</div>
-    <div class="tier-name">Growth</div>
-    <div class="tier-price" data-monthly="199" data-annual="159"><span class="amount">$199</span> <span class="period">/mo</span></div>
-    <div class="tier-desc">800 prospects per account. Everything your agency needs to run outreach.</div>
+    <div class="tier-name">Estándar</div>
+    <div class="tier-price">&euro;249 <span class="period">/mo</span></div>
+    <div class="tier-desc">5,000 messages/month. WhatsApp + voice for growing businesses.</div>
     <ul class="tier-features">
-      <li><span class="ck">✓</span> 800 prospects/account/month</li>
-      <li><span class="ck">✓</span> Unlimited campaigns</li>
-      <li><span class="ck">✓</span> AI lead scoring</li>
-      <li><span class="ck">✓</span> AI-written messages</li>
-      <li><span class="ck">✓</span> Prospect research</li>
-      <li><span class="ck">✓</span> Full analytics</li>
-      <li><span class="ck">✓</span> CSV import</li>
-      <li><span class="ck">✓</span> 7-day free trial</li>
+      <li><span class="ck">✓</span> 5,000 messages included</li>
+      <li><span class="ck">✓</span> 2 WhatsApp bots</li>
+      <li><span class="ck">✓</span> 1 voice bot (coming soon)</li>
+      <li><span class="ck">✓</span> 1 phone number included</li>
+      <li><span class="locked">—</span> Integrations not included</li>
+      <li><span class="ck">✓</span> Conversation dashboard</li>
+      <li><span class="ck">✓</span> Priority email support</li>
     </ul>
-    <a href="https://cal.com/rubitec/30min" class="btn-tier primary">Start free trial</a>
+    <a href="https://cal.com/rubitec/30min" class="btn-tier primary">Get started</a>
+    <div class="setup-fee">&euro;1,000 one-time setup fee</div>
   </div>
 
+  <!-- Pro -->
   <div class="price-card">
-    <div class="tier-name">Agency</div>
-    <div class="tier-price" data-monthly="299" data-annual="239"><span class="amount">$299</span> <span class="period">/mo</span></div>
-    <div class="tier-desc">Multi-account outreach for growing agency teams.</div>
+    <div class="tier-name">Pro</div>
+    <div class="tier-price">&euro;449 <span class="period">/mo</span></div>
+    <div class="tier-desc">15,000 messages/month. Multiple bots and dedicated strategy support.</div>
     <ul class="tier-features">
-      <li><span class="ck">✓</span> 800 prospects/account/month</li>
-      <li><span class="ck">✓</span> 5 LinkedIn accounts</li>
-      <li><span class="ck">✓</span> Everything in Growth</li>
-      <li><span class="ck">✓</span> Team collaboration</li>
-      <li><span class="ck">✓</span> Dedicated account manager</li>
-      <li><span class="ck">✓</span> Priority support</li>
-      <li><span class="ck">✓</span> API access</li>
-      <li><span class="ck">✓</span> 7-day free trial</li>
+      <li><span class="ck">✓</span> 15,000 messages included</li>
+      <li><span class="ck">✓</span> 5 WhatsApp bots</li>
+      <li><span class="ck">✓</span> 3 voice bots (coming soon)</li>
+      <li><span class="ck">✓</span> 2 phone numbers included</li>
+      <li><span class="locked">—</span> Integrations not included</li>
+      <li><span class="ck">✓</span> Conversation dashboard</li>
+      <li><span class="ck">✓</span> Monthly strategy call + SLA</li>
     </ul>
-    <a href="https://cal.com/rubitec/30min" class="btn-tier outline">Contact sales</a>
+    <a href="https://cal.com/rubitec/30min" class="btn-tier outline">Get started</a>
+    <div class="setup-fee">&euro;1,500 one-time setup fee</div>
+  </div>
+
+</div>
+
+<!-- CUSTOM TIER -->
+<div class="custom-card-wrapper">
+  <div class="price-card custom">
+    <div class="custom-left">
+      <div class="tier-name">Custom</div>
+      <div class="tier-price" style="font-size:2.25rem;">From &euro;799 <span class="period">/mo</span></div>
+      <div class="tier-desc" style="margin-bottom:16px;">For businesses that need full integrations, unlimited bots, and a dedicated team behind their automation.</div>
+      <a href="https://cal.com/rubitec/30min" class="btn-tier primary" style="max-width:200px;">Contact us</a>
+      <div class="setup-fee" style="text-align:left;">Setup fee based on scope and integrations</div>
+    </div>
+    <div class="custom-right">
+      <ul class="tier-features" style="margin-bottom:0;">
+        <li><span class="ck">✓</span> Custom message volume</li>
+        <li><span class="ck">✓</span> Unlimited WhatsApp bots</li>
+        <li><span class="ck">✓</span> Voice bots included</li>
+        <li><span class="ck">✓</span> Multiple phone numbers</li>
+        <li><span class="ck">✓</span> Full native integrations (Sage, HubSpot, Salesforce, Zoho, Holded, SAP Business One, Microsoft Dynamics, WooCommerce, Shopify)</li>
+        <li><span class="ck">✓</span> Custom connectors on request</li>
+        <li><span class="ck">✓</span> Dedicated account manager</li>
+        <li><span class="ck">✓</span> Custom SLA</li>
+      </ul>
+    </div>
+  </div>
+  <p style="font-size:0.78rem;color:var(--text-muted);margin-top:10px;padding:0 4px;">Integrations are scoped and priced per implementation. Setup fees vary based on the systems connected and complexity.</p>
+</div>
+
+<!-- PRICING NOTES -->
+<div class="pricing-notes">
+  <div class="pricing-note">
+    <strong>All plans include</strong> OpenAI API costs, Twilio WhatsApp messaging, hosting, and ongoing maintenance. No surprises.
+  </div>
+  <div class="pricing-note">
+    <strong>Overage:</strong> Messages above your plan limit are charged at &euro;0.01/message.
+  </div>
+  <div class="pricing-note">
+    Already a client? Your existing setup fee is already covered.
   </div>
 </div>
 
-<section class="comp-section">
-  <h2>Compare plans</h2>
-  <div class="comp-table">
-    <div class="comp-header">
-      <div>Feature</div><div>Growth</div><div>Agency</div>
-    </div>
-    <div class="comp-cat"><div>Prospecting</div><div></div><div></div></div>
-    <div class="comp-row"><div>Prospects per account</div><div>800/mo</div><div>800/mo</div></div>
-    <div class="comp-row"><div>Active campaigns</div><div>Unlimited</div><div>Unlimited</div></div>
-    <div class="comp-row"><div>CSV import</div><div><span class="check">✓</span></div><div><span class="check">✓</span></div></div>
-    <div class="comp-row"><div>Prospect research</div><div><span class="check">✓</span></div><div><span class="check">✓</span></div></div>
-
-    <div class="comp-cat"><div>AI Features</div><div></div><div></div></div>
-    <div class="comp-row"><div>AI lead scoring</div><div><span class="check">✓</span></div><div><span class="check">✓</span></div></div>
-    <div class="comp-row"><div>AI-written messages</div><div><span class="check">✓</span></div><div><span class="check">✓</span></div></div>
-    <div class="comp-row"><div>ICP matching</div><div><span class="check">✓</span></div><div><span class="check">✓</span></div></div>
-
-    <div class="comp-cat"><div>Engagement</div><div></div><div></div></div>
-    <div class="comp-row"><div>Sequence builder</div><div><span class="check">✓</span></div><div><span class="check">✓</span></div></div>
-    <div class="comp-row"><div>Unified inbox</div><div><span class="check">✓</span></div><div><span class="check">✓</span></div></div>
-    <div class="comp-row"><div>A/B testing</div><div><span class="check">✓</span></div><div><span class="check">✓</span></div></div>
-
-    <div class="comp-cat"><div>Team &amp; Support</div><div></div><div></div></div>
-    <div class="comp-row"><div>LinkedIn accounts</div><div>1</div><div>5</div></div>
-    <div class="comp-row"><div>Team collaboration</div><div><span class="cross">-</span></div><div><span class="check">✓</span></div></div>
-    <div class="comp-row"><div>API access</div><div><span class="cross">-</span></div><div><span class="check">✓</span></div></div>
-    <div class="comp-row"><div>Dedicated account manager</div><div><span class="cross">-</span></div><div><span class="check">✓</span></div></div>
-    <div class="comp-row"><div>Priority support</div><div><span class="cross">-</span></div><div><span class="check">✓</span></div></div>
-  </div>
-</section>
-
+<!-- FAQ -->
 <section class="faq-section">
   <h2>Frequently asked questions</h2>
   <div class="faq-item">
-    <div class="faq-q">Is there a free trial? <span class="faq-toggle">+</span></div>
-    <div class="faq-a">Yes. Every plan comes with a 7-day free trial. You'll need a card to start, but you won't be charged until the trial ends.</div>
+    <div class="faq-q">What's included in the monthly price? <span class="faq-toggle">+</span></div>
+    <div class="faq-a">Everything you need to run your bot: AI processing (OpenAI), WhatsApp messaging (Twilio), hosting, maintenance, and ongoing improvements to your bot's responses. There are no hidden API costs or per-message surprises — just one monthly fee.</div>
   </div>
   <div class="faq-item">
     <div class="faq-q">Can I cancel anytime? <span class="faq-toggle">+</span></div>
-    <div class="faq-a">Absolutely. There are no annual contracts or lock-ins. Cancel from your dashboard and you'll keep access until the end of your billing cycle.</div>
+    <div class="faq-a">Yes. There are no annual contracts or lock-ins. Cancel anytime and you'll keep access until the end of your billing cycle. The one-time setup fee is non-refundable.</div>
   </div>
   <div class="faq-item">
-    <div class="faq-q">Do I need a LinkedIn Premium account? <span class="faq-toggle">+</span></div>
-    <div class="faq-a">No. Boundbird works with any LinkedIn account. A Sales Navigator subscription can help find better prospects, but it's not required.</div>
+    <div class="faq-q">What happens if I go over my message limit? <span class="faq-toggle">+</span></div>
+    <div class="faq-a">Messages above your plan limit are billed at &euro;0.01 per message. We'll notify you when you're approaching your limit so there are no surprises.</div>
   </div>
   <div class="faq-item">
-    <div class="faq-q">How does AI lead scoring work? <span class="faq-toggle">+</span></div>
-    <div class="faq-a">Boundbird's AI analyzes each prospect's profile, company data, activity, and hiring signals, then scores them on how closely they match your ideal client profile.</div>
+    <div class="faq-q">Do I need to build the bot myself? <span class="faq-toggle">+</span></div>
+    <div class="faq-a">No. Boundbird is a fully managed service. We configure your bot, train it on your business (products, pricing, policies), connect it to WhatsApp, and keep improving it over time. You don't need any technical knowledge.</div>
   </div>
   <div class="faq-item">
-    <div class="faq-q">Can I manage outreach for multiple clients? <span class="faq-toggle">+</span></div>
-    <div class="faq-a">The Agency plan supports up to 5 LinkedIn accounts with team collaboration. Need more? Contact us for a custom plan.</div>
+    <div class="faq-q">When will voice bots be available? <span class="faq-toggle">+</span></div>
+    <div class="faq-a">Voice bots are currently in beta. Plans that include voice bots will have access as soon as it's generally available. If you're on the Custom plan, you can join the beta now.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Does Boundbird connect with my ERP or CRM? <span class="faq-toggle">+</span></div>
+    <div class="faq-a">Yes. Our Custom plan includes native integrations with Sage, HubSpot, Salesforce, Holded, SAP, and more. We connect your bot directly to your existing systems so orders, contacts, and data flow automatically.</div>
   </div>
 </section>
 
 <section class="cta-section">
   <h2>Not sure which plan <em>fits?</em></h2>
-  <p>Book a quick call and we'll help you pick the right setup for your agency.</p>
+  <p>Book a quick call and we'll help you pick the right setup for your business.</p>
   <a href="https://cal.com/rubitec/30min" class="btn btn-primary" style="padding:12px 28px;font-size:0.95rem;">
     Book a demo
     <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -363,7 +361,7 @@ footer {
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="/" class="logo"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="0" width="4" height="4" fill="#a5b4fc"/><rect x="16" y="0" width="4" height="4" fill="#818cf8"/><rect x="8" y="4" width="4" height="4" fill="#c7d2fe"/><rect x="12" y="4" width="4" height="4" fill="#a5b4fc"/><rect x="16" y="4" width="4" height="4" fill="#818cf8"/><rect x="20" y="4" width="4" height="4" fill="#6366f1"/><rect x="4" y="8" width="4" height="4" fill="#a5b4fc"/><rect x="8" y="8" width="4" height="4" fill="#c7d2fe"/><rect x="12" y="8" width="4" height="4" fill="#e0e7ff"/><rect x="16" y="8" width="4" height="4" fill="#a5b4fc"/><rect x="20" y="8" width="4" height="4" fill="#6366f1"/><rect x="24" y="8" width="4" height="4" fill="#4f46e5"/><rect x="4" y="12" width="4" height="4" fill="#818cf8"/><rect x="8" y="12" width="4" height="4" fill="#a5b4fc"/><rect x="12" y="12" width="4" height="4" fill="#818cf8"/><rect x="16" y="12" width="4" height="4" fill="#7c3aed"/><rect x="20" y="12" width="4" height="4" fill="#6366f1"/><rect x="24" y="12" width="4" height="4" fill="#4338ca"/><rect x="4" y="16" width="4" height="4" fill="#6366f1"/><rect x="8" y="16" width="4" height="4" fill="#818cf8"/><rect x="12" y="16" width="4" height="4" fill="#6366f1"/><rect x="16" y="16" width="4" height="4" fill="#5b21b6"/><rect x="20" y="16" width="4" height="4" fill="#4f46e5"/><rect x="24" y="16" width="4" height="4" fill="#3730a3"/><rect x="4" y="20" width="4" height="4" fill="#4f46e5"/><rect x="8" y="20" width="4" height="4" fill="#6366f1"/><rect x="12" y="20" width="4" height="4" fill="#4f46e5"/><rect x="16" y="20" width="4" height="4" fill="#4338ca"/><rect x="20" y="20" width="4" height="4" fill="#3730a3"/><rect x="24" y="20" width="4" height="4" fill="#312e81"/><rect x="8" y="24" width="4" height="4" fill="#4338ca"/><rect x="12" y="24" width="4" height="4" fill="#3730a3"/><rect x="16" y="24" width="4" height="4" fill="#312e81"/><rect x="20" y="24" width="4" height="4" fill="#312e81"/><rect x="12" y="28" width="4" height="4" fill="#312e81"/><rect x="16" y="28" width="4" height="4" fill="#1e1b4b"/></svg>boundbird</a>
-      <p>AI-powered LinkedIn outreach for agencies and small companies that need a full pipeline.</p>
+      <p>AI-powered WhatsApp and voice bots for SMEs. Handle customer conversations 24/7, without the complexity.</p>
     </div>
     <div class="footer-cols">
       <div class="footer-col"><h4>Product</h4><a href="/#features">Features</a><a href="/pricing.html">Pricing</a><a href="#">Changelog</a></div>
@@ -378,25 +376,6 @@ footer {
 </footer>
 
 <script>
-// Toggle pricing period
-var toggle = document.querySelector('.toggle');
-var buttons = toggle.querySelectorAll('button');
-var prices = document.querySelectorAll('.tier-price');
-
-buttons.forEach(function(btn) {
-  btn.addEventListener('click', function() {
-    buttons.forEach(function(b) { b.classList.remove('active'); });
-    btn.classList.add('active');
-    var period = btn.dataset.period;
-    prices.forEach(function(p) {
-      var val = p.dataset[period];
-      if (val !== undefined) {
-        p.querySelector('.amount').textContent = '$' + val;
-      }
-    });
-  });
-});
-
 // FAQ accordion
 document.querySelectorAll('.faq-q').forEach(function(q) {
   q.addEventListener('click', function() {

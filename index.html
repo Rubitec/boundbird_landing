@@ -10,7 +10,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MZVPMGVS');</script>
 <!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Boundbird - Outreach that lands clients</title>
+<title>Boundbird - AI bots for WhatsApp and voice, built for real businesses</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -387,6 +387,49 @@ nav {
 .comp-row .col-bb { font-weight: 600; color: var(--text); }
 .check { color: var(--green); } .cross { color: #ef4444; }
 
+/* === INTEGRATIONS === */
+.integrations-strip {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+  max-width: 800px; margin: 40px auto 0;
+}
+.integration-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 10px 18px; background: var(--bg-white);
+  border: 1px solid var(--border); border-radius: var(--radius-sm);
+  font-size: 0.85rem; font-weight: 500; color: var(--text-secondary);
+  transition: box-shadow 0.2s;
+}
+.integration-item:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.integration-icon {
+  width: 24px; height: 24px; border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; flex-shrink: 0;
+}
+
+/* === USE CASES === */
+.use-cases-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  margin-top: 40px;
+}
+.use-case-card {
+  background: var(--bg-white); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+  transition: box-shadow 0.2s;
+}
+.use-case-card:hover { box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+.use-case-icon {
+  width: 40px; height: 40px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; margin-bottom: 14px;
+}
+.use-case-card h4 {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 1.05rem; font-weight: 500; margin-bottom: 6px;
+}
+.use-case-card p {
+  font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5;
+}
+
 /* === CTA === */
 .cta-section {
   padding: 120px 24px; text-align: center;
@@ -452,6 +495,12 @@ footer {
   .comp-header div, .comp-row div { padding: 10px 12px; font-size: 0.78rem; }
   .footer-grid { flex-direction: column; }
   .footer-cols { gap: 32px; }
+  .use-cases-grid { grid-template-columns: 1fr 1fr; }
+  .integrations-strip { gap: 12px; }
+  .integration-item { padding: 8px 14px; font-size: 0.78rem; }
+}
+@media (max-width: 480px) {
+  .use-cases-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -476,12 +525,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-label"><span class="hero-dot"></span> Now in early access</div>
-  <h1>Outreach that <em>lands clients</em></h1>
-  <p>AI-powered prospecting, automatic lead scoring, and multi-step sequences. Built for agency owners and CEOs who need a full pipeline.</p>
+  <div class="hero-label"><span class="hero-dot"></span> Now accepting new clients</div>
+  <h1>Your business, <em>always responding</em></h1>
+  <p>AI-powered WhatsApp and voice bots that handle orders, inquiries, bookings, and support 24/7. Built for SMEs, managed for you.</p>
   <div class="hero-buttons">
     <a href="https://cal.com/rubitec/30min" class="btn btn-primary">
-      Book a demo
+      Get started
       <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
     <a href="#features" class="btn btn-secondary">See how it works</a>
@@ -495,45 +544,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="mockup-dot dot-r"></div>
       <div class="mockup-dot dot-y"></div>
       <div class="mockup-dot dot-g"></div>
-      <div class="mockup-url">app.boundbird.ai/campaigns</div>
+      <div class="mockup-url">app.boundbird.ai/conversations</div>
     </div>
     <div class="mockup-body">
       <div class="mock-sidebar">
-        <div class="mock-nav active"><span>📊</span> Dashboard</div>
-        <div class="mock-nav"><span>🎯</span> Campaigns</div>
-        <div class="mock-nav"><span>👥</span> Prospects</div>
-        <div class="mock-divider">Engage</div>
-        <div class="mock-nav"><span>💬</span> Sequences</div>
-        <div class="mock-nav"><span>📥</span> Inbox</div>
+        <div class="mock-nav active"><span>💬</span> Conversations</div>
+        <div class="mock-nav"><span>🤖</span> Bots</div>
+        <div class="mock-nav"><span>📊</span> Dashboard</div>
+        <div class="mock-divider">Channels</div>
+        <div class="mock-nav"><span>📱</span> WhatsApp</div>
+        <div class="mock-nav"><span>📞</span> Voice</div>
         <div class="mock-divider">Settings</div>
         <div class="mock-nav"><span>⚙️</span> Account</div>
       </div>
       <div class="mock-main">
         <div class="mock-topbar">
-          <div class="mock-title">Agency CEOs - EU</div>
-          <div class="mock-badge"><span class="mock-badge-dot"></span> Running</div>
+          <div class="mock-title">WhatsApp Bot - Orders</div>
+          <div class="mock-badge"><span class="mock-badge-dot"></span> Active</div>
         </div>
         <div class="mock-stats">
-          <div class="mock-stat"><div class="mock-stat-val">312</div><div class="mock-stat-lbl">Sent</div></div>
-          <div class="mock-stat"><div class="mock-stat-val" style="color:var(--green)">127</div><div class="mock-stat-lbl">Accepted</div></div>
-          <div class="mock-stat"><div class="mock-stat-val" style="color:var(--orange)">48</div><div class="mock-stat-lbl">Replied</div></div>
-          <div class="mock-stat"><div class="mock-stat-val" style="color:var(--blue)">37%</div><div class="mock-stat-lbl">Reply Rate</div></div>
+          <div class="mock-stat"><div class="mock-stat-val">1,247</div><div class="mock-stat-lbl">Messages</div></div>
+          <div class="mock-stat"><div class="mock-stat-val" style="color:var(--green)">312</div><div class="mock-stat-lbl">Resolved</div></div>
+          <div class="mock-stat"><div class="mock-stat-val" style="color:var(--orange)">18</div><div class="mock-stat-lbl">Pending</div></div>
+          <div class="mock-stat"><div class="mock-stat-val" style="color:var(--blue)">94%</div><div class="mock-stat-lbl">Auto-resolved</div></div>
         </div>
         <div class="mock-feed">
           <div class="mock-feed-item">
-            <div class="mock-avatar" style="background:var(--blue-bg);color:var(--blue);">JM</div>
-            <div class="mock-feed-text"><strong>Julia M.</strong> accepted your connection</div>
+            <div class="mock-avatar" style="background:var(--green-bg);color:var(--green);">CR</div>
+            <div class="mock-feed-text"><strong>Carlos R.</strong> placed an order via WhatsApp</div>
             <div class="mock-feed-time">2m ago</div>
           </div>
           <div class="mock-feed-item">
-            <div class="mock-avatar" style="background:var(--green-bg);color:var(--green);">DK</div>
-            <div class="mock-feed-text"><strong>Daniel K.</strong> replied to your message</div>
+            <div class="mock-avatar" style="background:var(--blue-bg);color:var(--blue);">ML</div>
+            <div class="mock-feed-text"><strong>Maria L.</strong> booked an appointment</div>
             <div class="mock-feed-time">8m ago</div>
           </div>
           <div class="mock-feed-item">
-            <div class="mock-avatar" style="background:var(--orange-bg);color:var(--orange);">SR</div>
-            <div class="mock-feed-text"><strong>Sara R.</strong> accepted your connection</div>
-            <div class="mock-feed-time">14m ago</div>
+            <div class="mock-avatar" style="background:var(--orange-bg);color:var(--orange);">JG</div>
+            <div class="mock-feed-text"><strong>Jorge G.</strong> asked about delivery status</div>
+            <div class="mock-feed-time">12m ago</div>
           </div>
         </div>
       </div>
@@ -541,41 +590,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
-<!-- FEATURES: 2x2 GRID (Enginy-style) -->
+<!-- FEATURES: 2x2 GRID -->
 <section class="section" id="features">
   <div class="container">
     <div style="text-align:center;margin-bottom:48px;" class="reveal">
       <div class="section-label">What Boundbird does</div>
-      <h2 class="section-heading">Everything your team needs<br>to <em>fill the pipeline</em></h2>
+      <h2 class="section-heading">Everything your business needs<br>to <em>never miss a customer</em></h2>
     </div>
     <div class="feature-grid">
 
-      <!-- Card 1: Sequences -->
+      <!-- Card 1: WhatsApp Bot -->
       <div class="feature-card reveal">
-        <div class="feature-card-label" style="color:var(--blue);">Sequences</div>
-        <h3>Outreach on autopilot</h3>
-        <p>Multi-step LinkedIn sequences with smart delays and AI-written messages. Set it once, book calls all week.</p>
+        <div class="feature-card-label" style="color:var(--green);">WhatsApp</div>
+        <h3>AI bot on WhatsApp, 24/7</h3>
+        <p>Your customers message you on WhatsApp. The bot answers instantly — takes orders, answers questions, confirms bookings. No missed messages, ever.</p>
         <div class="feature-card-visual">
           <div class="card-ui">
             <div class="card-ui-header">
-              <span>Sequence Builder</span>
-              <span style="color:var(--text-muted);font-weight:500;">3 steps</span>
+              <span>WhatsApp Conversation</span>
+              <span style="color:var(--green);font-weight:500;">Live</span>
             </div>
             <div class="card-ui-body">
               <div class="seq-mini">
                 <div class="seq-mini-step">
-                  <div class="seq-mini-icon" style="background:var(--blue-bg);color:var(--blue);">🔗</div>
-                  <div><div class="seq-mini-name">Send connection</div><div class="seq-mini-desc">Personalized note with {first_name}</div></div>
+                  <div class="seq-mini-icon" style="background:var(--bg-muted);color:var(--text-secondary);">👤</div>
+                  <div><div class="seq-mini-name">Customer</div><div class="seq-mini-desc">Hi, I'd like to place an order for 50 units</div></div>
                 </div>
                 <div class="seq-mini-line"></div>
                 <div class="seq-mini-step">
-                  <div class="seq-mini-icon" style="background:var(--orange-bg);color:var(--orange);">⏳</div>
-                  <div><div class="seq-mini-name">Wait 2 days</div><div class="seq-mini-desc">Or until accepted</div></div>
+                  <div class="seq-mini-icon" style="background:var(--green-bg);color:var(--green);">🤖</div>
+                  <div><div class="seq-mini-name">Boundbird</div><div class="seq-mini-desc">Got it! 50 units of which product? Here's your catalog...</div></div>
                 </div>
                 <div class="seq-mini-line"></div>
                 <div class="seq-mini-step">
-                  <div class="seq-mini-icon" style="background:var(--green-bg);color:var(--green);">✉️</div>
-                  <div><div class="seq-mini-name">Follow-up message</div><div class="seq-mini-desc">AI-personalized intro</div></div>
+                  <div class="seq-mini-icon" style="background:var(--bg-muted);color:var(--text-secondary);">👤</div>
+                  <div><div class="seq-mini-name">Customer</div><div class="seq-mini-desc">The premium blend, same as last month</div></div>
                 </div>
               </div>
             </div>
@@ -583,56 +632,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
 
-      <!-- Card 2: AI Lead Scoring -->
+      <!-- Card 2: Voice Bot -->
       <div class="feature-card reveal">
-        <div class="feature-card-label" style="color:var(--green);">AI-Powered</div>
-        <h3>Leads scored automatically</h3>
-        <p>Boundbird's AI scores every prospect by ICP fit, activity, and company data. Focus on who's most likely to close.</p>
+        <div class="feature-card-label" style="color:var(--blue);">Voice <span style="font-size:0.6rem;padding:1px 6px;background:var(--blue-bg);border:1px solid var(--blue-border);border-radius:4px;margin-left:6px;vertical-align:middle;">Coming soon</span></div>
+        <h3>Voice bots that sound human</h3>
+        <p>An AI voice agent picks up the phone, understands requests, and handles calls just like your best team member. No hold music, no voicemail.</p>
         <div class="feature-card-visual">
           <div class="card-ui">
             <div class="card-ui-header">
-              <span>Lead Scoring</span>
-              <span style="color:var(--green);font-weight:500;">247 scored</span>
+              <span>Voice Bot</span>
+              <span style="color:var(--blue);font-weight:500;">In beta</span>
             </div>
             <div class="card-ui-body">
-              <div class="score-row">
-                <div class="score-avatar" style="background:var(--blue-bg);color:var(--blue);">JR</div>
-                <div class="score-name">Julia Rodriguez</div>
-                <div class="score-bar-wrap"><div class="score-bar" style="width:94%;background:var(--green);"></div></div>
-                <div class="score-val" style="color:var(--green);">94</div>
-              </div>
-              <div class="score-row">
-                <div class="score-avatar" style="background:var(--orange-bg);color:var(--orange);">PL</div>
-                <div class="score-name">Pablo Lopez</div>
-                <div class="score-bar-wrap"><div class="score-bar" style="width:87%;background:var(--green);"></div></div>
-                <div class="score-val" style="color:var(--green);">87</div>
-              </div>
-              <div class="score-row">
-                <div class="score-avatar" style="background:var(--green-bg);color:var(--green);">AM</div>
-                <div class="score-name">Anna Muller</div>
-                <div class="score-bar-wrap"><div class="score-bar" style="width:72%;background:var(--orange);"></div></div>
-                <div class="score-val" style="color:var(--orange);">72</div>
-              </div>
-              <div class="score-row">
-                <div class="score-avatar" style="background:var(--bg-muted);color:var(--text-muted);">MT</div>
-                <div class="score-name">Marco Torres</div>
-                <div class="score-bar-wrap"><div class="score-bar" style="width:65%;background:var(--text-muted);"></div></div>
-                <div class="score-val">65</div>
+              <div class="seq-mini">
+                <div class="seq-mini-step">
+                  <div class="seq-mini-icon" style="background:var(--blue-bg);color:var(--blue);">📞</div>
+                  <div><div class="seq-mini-name">Incoming call</div><div class="seq-mini-desc">+34 612 345 678</div></div>
+                </div>
+                <div class="seq-mini-line"></div>
+                <div class="seq-mini-step">
+                  <div class="seq-mini-icon" style="background:var(--green-bg);color:var(--green);">🤖</div>
+                  <div><div class="seq-mini-name">AI answers</div><div class="seq-mini-desc">"Hello, thanks for calling. How can I help?"</div></div>
+                </div>
+                <div class="seq-mini-line"></div>
+                <div class="seq-mini-step">
+                  <div class="seq-mini-icon" style="background:var(--orange-bg);color:var(--orange);">✓</div>
+                  <div><div class="seq-mini-name">Appointment booked</div><div class="seq-mini-desc">Thursday at 10:00 - confirmed via SMS</div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Card 3: Analytics -->
+      <!-- Card 3: Conversation Dashboard -->
       <div class="feature-card reveal">
-        <div class="feature-card-label" style="color:var(--orange);">Analytics</div>
-        <h3>See what converts</h3>
-        <p>Track acceptance, reply, and booked-call rates across every campaign. Double down on what works.</p>
+        <div class="feature-card-label" style="color:var(--orange);">Dashboard</div>
+        <h3>Every conversation, one place</h3>
+        <p>See every customer interaction across WhatsApp and voice in a single dashboard. Know what's being asked, what's resolved, and what needs attention.</p>
         <div class="feature-card-visual">
           <div class="card-ui">
             <div class="card-ui-header">
-              <span>Campaign Performance</span>
+              <span>Conversation Overview</span>
               <span style="color:var(--text-muted);font-weight:500;">Last 7 days</span>
             </div>
             <div class="card-ui-body">
@@ -641,54 +682,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
               </div>
               <div class="kpi-mini">
-                <div class="kpi-mini-item"><div class="kpi-mini-val">41%</div><div class="kpi-mini-lbl">Acceptance</div></div>
-                <div class="kpi-mini-item"><div class="kpi-mini-val" style="color:var(--green);">37%</div><div class="kpi-mini-lbl">Reply Rate</div></div>
-                <div class="kpi-mini-item"><div class="kpi-mini-val" style="color:var(--orange);">8</div><div class="kpi-mini-lbl">Calls Booked</div></div>
+                <div class="kpi-mini-item"><div class="kpi-mini-val">1.2k</div><div class="kpi-mini-lbl">Messages</div></div>
+                <div class="kpi-mini-item"><div class="kpi-mini-val" style="color:var(--green);">94%</div><div class="kpi-mini-lbl">Auto-resolved</div></div>
+                <div class="kpi-mini-item"><div class="kpi-mini-val" style="color:var(--orange);">2m</div><div class="kpi-mini-lbl">Avg. response</div></div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Card 4: Inbox -->
+      <!-- Card 4: Managed for you -->
       <div class="feature-card reveal">
-        <div class="feature-card-label" style="color:var(--text-secondary);">Inbox</div>
-        <h3>Every reply, one place</h3>
-        <p>All LinkedIn conversations in a single inbox. No more switching between tabs to follow up.</p>
+        <div class="feature-card-label" style="color:var(--text-secondary);">Managed</div>
+        <h3>Set up and run for you</h3>
+        <p>This isn't a DIY tool. We build your bot, train it on your business, and keep improving it. You focus on running your business.</p>
         <div class="feature-card-visual">
           <div class="card-ui">
             <div class="card-ui-header">
-              <span>Inbox</span>
-              <span style="color:var(--orange);font-weight:500;">3 new</span>
+              <span>Your setup</span>
+              <span style="color:var(--green);font-weight:500;">All included</span>
             </div>
             <div class="card-ui-body">
               <div class="inbox-mini">
                 <div class="inbox-mini-msg">
-                  <div class="score-avatar" style="background:var(--green-bg);color:var(--green);">DK</div>
+                  <div class="score-avatar" style="background:var(--green-bg);color:var(--green);">✓</div>
                   <div class="inbox-mini-content">
-                    <div class="inbox-mini-name">Daniel Klein</div>
-                    <div class="inbox-mini-preview">Sure, let's set up a call next week...</div>
-                    <div class="inbox-mini-tag" style="background:var(--green-bg);color:var(--green);">Hot lead</div>
+                    <div class="inbox-mini-name">Bot configuration</div>
+                    <div class="inbox-mini-preview">Trained on your products, pricing, and FAQs</div>
+                    <div class="inbox-mini-tag" style="background:var(--green-bg);color:var(--green);">Done</div>
                   </div>
-                  <div class="inbox-mini-time">2m</div>
                 </div>
                 <div class="inbox-mini-msg">
-                  <div class="score-avatar" style="background:var(--blue-bg);color:var(--blue);">JR</div>
+                  <div class="score-avatar" style="background:var(--green-bg);color:var(--green);">✓</div>
                   <div class="inbox-mini-content">
-                    <div class="inbox-mini-name">Julia Rodriguez</div>
-                    <div class="inbox-mini-preview">Thanks for connecting! What do you...</div>
-                    <div class="inbox-mini-tag" style="background:var(--blue-bg);color:var(--blue);">Interested</div>
+                    <div class="inbox-mini-name">WhatsApp number connected</div>
+                    <div class="inbox-mini-preview">Business profile verified and live</div>
+                    <div class="inbox-mini-tag" style="background:var(--green-bg);color:var(--green);">Active</div>
                   </div>
-                  <div class="inbox-mini-time">18m</div>
                 </div>
                 <div class="inbox-mini-msg">
-                  <div class="score-avatar" style="background:var(--bg-muted);color:var(--text-muted);">SR</div>
+                  <div class="score-avatar" style="background:var(--blue-bg);color:var(--blue);">↻</div>
                   <div class="inbox-mini-content">
-                    <div class="inbox-mini-name">Sara Ruiz</div>
-                    <div class="inbox-mini-preview">Can you send more info about your...</div>
-                    <div class="inbox-mini-tag" style="background:var(--orange-bg);color:var(--orange);">Follow up</div>
+                    <div class="inbox-mini-name">Ongoing improvements</div>
+                    <div class="inbox-mini-preview">Monthly updates based on conversation data</div>
+                    <div class="inbox-mini-tag" style="background:var(--blue-bg);color:var(--blue);">Continuous</div>
                   </div>
-                  <div class="inbox-mini-time">1h</div>
                 </div>
               </div>
             </div>
@@ -702,60 +740,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <hr class="divider">
 
-<!-- AI DEEP DIVE -->
+<!-- HOW IT WORKS -->
 <section class="section">
   <div class="container">
     <div class="feature-row reveal">
       <div class="feature-row-text">
-        <div class="section-label">How the AI works</div>
-        <h2 class="section-heading">Your best researcher,<br><em>working 24/7</em></h2>
-        <p class="section-desc">Boundbird researches every prospect before you reach out. Company size, recent posts, tech stack, hiring signals. Then it scores them and writes a message that actually sounds human.</p>
+        <div class="section-label">How it works</div>
+        <h2 class="section-heading">AI that knows<br><em>your business</em></h2>
+        <p class="section-desc">Your Boundbird bot learns your products, pricing, policies, and tone. It handles customer conversations naturally — from taking orders to answering complex questions — so your team doesn't have to.</p>
         <div class="feature-row-points">
           <div class="feature-row-point">
             <div class="point-marker" style="background:var(--green-bg);color:var(--green);">✓</div>
-            <span>Automatic ICP scoring based on your ideal client profile</span>
+            <span>Trained on your catalog, pricing, and business rules</span>
           </div>
           <div class="feature-row-point">
             <div class="point-marker" style="background:var(--blue-bg);color:var(--blue);">✓</div>
-            <span>Prospect research pulled from LinkedIn, company data, and news</span>
+            <span>Responds in seconds, 24 hours a day, 7 days a week</span>
           </div>
           <div class="feature-row-point">
             <div class="point-marker" style="background:var(--orange-bg);color:var(--orange);">✓</div>
-            <span>AI-written messages personalized per prospect, not just {first_name}</span>
+            <span>Escalates to your team when it needs a human decision</span>
           </div>
         </div>
         <div class="quote-block">
-          <div class="quote-avatar">MC</div>
+          <div class="quote-avatar">RP</div>
           <div>
-            <div class="quote-text">"Replaced our entire cold outreach process. We booked 12 discovery calls in the first week."</div>
-            <div class="quote-author"><strong>Marc C.</strong> · Marketing Agency, Barcelona</div>
+            <div class="quote-text">"Our customers now place orders at midnight without waiting. The bot handles 90% of conversations — we just review the dashboard in the morning."</div>
+            <div class="quote-author"><strong>Roberto P.</strong> · Food Distribution, Madrid</div>
           </div>
         </div>
       </div>
       <div class="feature-row-visual">
         <div class="card-ui">
           <div class="card-ui-header">
-            <span>AI Research - Julia Rodriguez</span>
-            <span style="color:var(--green);font-weight:500;">Score: 94</span>
+            <span>WhatsApp - Distribuidora García</span>
+            <span style="color:var(--green);font-weight:500;">Bot active</span>
           </div>
           <div class="card-ui-body" style="font-size:0.8rem;">
             <div style="display:flex;flex-direction:column;gap:12px;">
               <div>
-                <div style="font-weight:600;margin-bottom:4px;">Company</div>
-                <div style="color:var(--text-secondary);">Kreativa Digital · 12 employees · Marketing Agency</div>
-              </div>
-              <div style="border-top:1px solid var(--border);padding-top:12px;">
-                <div style="font-weight:600;margin-bottom:4px;">Signals</div>
-                <div style="display:flex;gap:6px;flex-wrap:wrap;">
-                  <span style="padding:2px 8px;background:var(--green-bg);border:1px solid var(--green-border);border-radius:4px;font-size:0.7rem;font-weight:600;color:var(--green);">Hiring</span>
-                  <span style="padding:2px 8px;background:var(--blue-bg);border:1px solid var(--blue-border);border-radius:4px;font-size:0.7rem;font-weight:600;color:var(--blue);">Active poster</span>
-                  <span style="padding:2px 8px;background:var(--orange-bg);border:1px solid var(--orange-border);border-radius:4px;font-size:0.7rem;font-weight:600;color:var(--orange);">Growing team</span>
+                <div style="font-weight:600;margin-bottom:4px;">Customer request</div>
+                <div style="color:var(--text-secondary);background:var(--bg-muted);padding:10px;border-radius:6px;font-size:0.78rem;line-height:1.5;">
+                  "Hola, necesito 30 cajas del aceite de oliva premium y 15 del vinagre. Entrega para el viernes."
                 </div>
               </div>
               <div style="border-top:1px solid var(--border);padding-top:12px;">
-                <div style="font-weight:600;margin-bottom:4px;">AI message draft</div>
+                <div style="font-weight:600;margin-bottom:4px;">Bot response</div>
+                <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+                  <span style="padding:2px 8px;background:var(--green-bg);border:1px solid var(--green-border);border-radius:4px;font-size:0.7rem;font-weight:600;color:var(--green);">Order created</span>
+                  <span style="padding:2px 8px;background:var(--blue-bg);border:1px solid var(--blue-border);border-radius:4px;font-size:0.7rem;font-weight:600;color:var(--blue);">Stock verified</span>
+                  <span style="padding:2px 8px;background:var(--orange-bg);border:1px solid var(--orange-border);border-radius:4px;font-size:0.7rem;font-weight:600;color:var(--orange);">Delivery scheduled</span>
+                </div>
                 <div style="color:var(--text-secondary);background:var(--bg-muted);padding:10px;border-radius:6px;font-size:0.78rem;line-height:1.5;">
-                  Hi Julia, I noticed Kreativa is growing the team - congrats on the momentum. We help marketing agencies like yours automate prospecting so your team can focus on client work. Would a quick chat make sense?
+                  "¡Perfecto! Tu pedido: 30 cajas aceite premium (€12.50/ud) + 15 vinagre (€4.80/ud). Total: €447.00. Entrega confirmada para el viernes. ¿Todo correcto?"
                 </div>
               </div>
             </div>
@@ -763,6 +800,93 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- USE CASES -->
+<section class="section" id="use-cases">
+  <div class="container">
+    <div style="text-align:center;" class="reveal">
+      <div class="section-label">Use cases</div>
+      <h2 class="section-heading">Built for businesses <em>like yours</em></h2>
+      <p style="color:var(--text-secondary);max-width:440px;margin:8px auto 0;line-height:1.7;">From food distribution to healthcare, Boundbird works wherever your customers need fast, reliable answers.</p>
+    </div>
+    <div class="use-cases-grid reveal">
+      <div class="use-case-card">
+        <div class="use-case-icon" style="background:var(--orange-bg);">🍕</div>
+        <h4>Food distribution</h4>
+        <p>Customers order directly via WhatsApp. The bot checks stock, confirms pricing, and schedules delivery — no phone tag required.</p>
+      </div>
+      <div class="use-case-card">
+        <div class="use-case-icon" style="background:var(--blue-bg);">📦</div>
+        <h4>Wholesale ordering</h4>
+        <p>Repeat orders, bulk pricing, and catalog queries handled instantly. Your sales team focuses on relationships, not data entry.</p>
+      </div>
+      <div class="use-case-card">
+        <div class="use-case-icon" style="background:var(--green-bg);">🏥</div>
+        <h4>Healthcare appointments</h4>
+        <p>Patients book, reschedule, or cancel via WhatsApp. The bot manages your calendar and sends reminders automatically.</p>
+      </div>
+      <div class="use-case-card">
+        <div class="use-case-icon" style="background:var(--bg-muted);">💬</div>
+        <h4>Customer support</h4>
+        <p>Answer FAQs, track orders, and resolve issues 24/7. Escalate to a human only when needed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- INTEGRATIONS -->
+<section class="section" id="integrations">
+  <div class="container">
+    <div style="text-align:center;" class="reveal">
+      <div class="section-label">Integrations</div>
+      <h2 class="section-heading">Connects with the tools<br><em>you already use</em></h2>
+      <p style="color:var(--text-secondary);max-width:480px;margin:8px auto 0;line-height:1.7;">Your bot connects directly to your ERP, CRM, and ecommerce systems. Orders, contacts, and data flow automatically.</p>
+    </div>
+    <div class="integrations-strip reveal">
+      <div class="integration-item">
+        <div class="integration-icon" style="background:var(--green-bg);color:var(--green);">S</div>
+        Sage
+      </div>
+      <div class="integration-item">
+        <div class="integration-icon" style="background:var(--orange-bg);color:var(--orange);">H</div>
+        HubSpot
+      </div>
+      <div class="integration-item">
+        <div class="integration-icon" style="background:var(--blue-bg);color:var(--blue);">S</div>
+        Salesforce
+      </div>
+      <div class="integration-item">
+        <div class="integration-icon" style="background:var(--orange-bg);color:var(--orange);">Z</div>
+        Zoho CRM
+      </div>
+      <div class="integration-item">
+        <div class="integration-icon" style="background:var(--blue-bg);color:var(--blue);">H</div>
+        Holded
+      </div>
+      <div class="integration-item">
+        <div class="integration-icon" style="background:var(--bg-muted);color:var(--text-secondary);">S</div>
+        SAP Business One
+      </div>
+      <div class="integration-item">
+        <div class="integration-icon" style="background:var(--blue-bg);color:var(--blue);">D</div>
+        Microsoft Dynamics
+      </div>
+      <div class="integration-item">
+        <div class="integration-icon" style="background:var(--green-bg);color:var(--green);">W</div>
+        WooCommerce
+      </div>
+      <div class="integration-item">
+        <div class="integration-icon" style="background:var(--green-bg);color:var(--green);">S</div>
+        Shopify
+      </div>
+    </div>
+    <p style="text-align:center;font-size:0.82rem;color:var(--text-muted);margin-top:20px;" class="reveal">Integrations available on the Custom plan. Need a connector we don't list? <a href="https://cal.com/rubitec/30min" style="color:var(--text);font-weight:500;">Let's talk.</a></p>
   </div>
 </section>
 
@@ -773,37 +897,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container">
     <div style="text-align:center;" class="reveal">
       <div class="section-label">Compare</div>
-      <h2 class="section-heading">Why agencies <em>switch to Boundbird</em></h2>
-      <p style="color:var(--text-secondary);max-width:440px;margin:8px auto 0;line-height:1.7;">Enterprise tools weren't built for your team. Boundbird was.</p>
+      <h2 class="section-heading">Why SMEs <em>choose Boundbird</em></h2>
+      <p style="color:var(--text-secondary);max-width:440px;margin:8px auto 0;line-height:1.7;">Chatbot platforms weren't built for your business. Boundbird was.</p>
     </div>
     <div class="comp-table reveal">
       <div class="comp-header">
         <div>Feature</div>
         <div class="col-bb">Boundbird</div>
-        <div>Enterprise tools</div>
+        <div>DIY chatbots</div>
       </div>
       <div class="comp-row">
-        <div>Setup time</div>
-        <div class="col-bb"><span class="check">✓</span> 5 minutes</div>
-        <div>Hours to days</div>
+        <div>Setup</div>
+        <div class="col-bb"><span class="check">✓</span> Done for you</div>
+        <div>Build it yourself</div>
       </div>
       <div class="comp-row">
-        <div>AI lead scoring</div>
+        <div>AI that understands context</div>
         <div class="col-bb"><span class="check">✓</span> Built-in</div>
-        <div><span class="cross">✗</span> Add-on or missing</div>
+        <div><span class="cross">✗</span> Keyword-based</div>
       </div>
       <div class="comp-row">
-        <div>AI-written messages</div>
-        <div class="col-bb"><span class="check">✓</span> Included</div>
-        <div><span class="cross">✗</span> Templates only</div>
+        <div>All-inclusive pricing</div>
+        <div class="col-bb"><span class="check">✓</span> Everything included</div>
+        <div><span class="cross">✗</span> Per-message fees</div>
       </div>
       <div class="comp-row">
-        <div>Annual contract</div>
-        <div class="col-bb"><span class="check">✓</span> No lock-in</div>
-        <div>Usually required</div>
+        <div>Ongoing improvements</div>
+        <div class="col-bb"><span class="check">✓</span> We handle it</div>
+        <div>You maintain it</div>
       </div>
       <div class="comp-row">
-        <div>Built for agencies + SMBs</div>
+        <div>Built for SMEs</div>
         <div class="col-bb"><span class="check">✓</span> Yes</div>
         <div><span class="cross">✗</span> Enterprise focus</div>
       </div>
@@ -817,8 +941,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="cta-section">
   <div class="reveal">
     <div class="section-label" style="text-align:center;">Get started</div>
-    <h2>Ready to land your<br>next <em>client</em>?</h2>
-    <p>Agency owners and CEOs use Boundbird to fill their pipeline with AI-scored leads and automated outreach.</p>
+    <h2>Ready to let your business<br><em>respond on its own</em>?</h2>
+    <p>SME owners and ops managers use Boundbird to handle customer conversations 24/7 — while they focus on running the business.</p>
     <a href="https://cal.com/rubitec/30min" class="btn btn-primary" style="padding:14px 32px;font-size:0.95rem;">
       Book a demo
       <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4L9 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -831,7 +955,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="/" class="logo"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="0" width="4" height="4" fill="#a5b4fc"/><rect x="16" y="0" width="4" height="4" fill="#818cf8"/><rect x="8" y="4" width="4" height="4" fill="#c7d2fe"/><rect x="12" y="4" width="4" height="4" fill="#a5b4fc"/><rect x="16" y="4" width="4" height="4" fill="#818cf8"/><rect x="20" y="4" width="4" height="4" fill="#6366f1"/><rect x="4" y="8" width="4" height="4" fill="#a5b4fc"/><rect x="8" y="8" width="4" height="4" fill="#c7d2fe"/><rect x="12" y="8" width="4" height="4" fill="#e0e7ff"/><rect x="16" y="8" width="4" height="4" fill="#a5b4fc"/><rect x="20" y="8" width="4" height="4" fill="#6366f1"/><rect x="24" y="8" width="4" height="4" fill="#4f46e5"/><rect x="4" y="12" width="4" height="4" fill="#818cf8"/><rect x="8" y="12" width="4" height="4" fill="#a5b4fc"/><rect x="12" y="12" width="4" height="4" fill="#818cf8"/><rect x="16" y="12" width="4" height="4" fill="#7c3aed"/><rect x="20" y="12" width="4" height="4" fill="#6366f1"/><rect x="24" y="12" width="4" height="4" fill="#4338ca"/><rect x="4" y="16" width="4" height="4" fill="#6366f1"/><rect x="8" y="16" width="4" height="4" fill="#818cf8"/><rect x="12" y="16" width="4" height="4" fill="#6366f1"/><rect x="16" y="16" width="4" height="4" fill="#5b21b6"/><rect x="20" y="16" width="4" height="4" fill="#4f46e5"/><rect x="24" y="16" width="4" height="4" fill="#3730a3"/><rect x="4" y="20" width="4" height="4" fill="#4f46e5"/><rect x="8" y="20" width="4" height="4" fill="#6366f1"/><rect x="12" y="20" width="4" height="4" fill="#4f46e5"/><rect x="16" y="20" width="4" height="4" fill="#4338ca"/><rect x="20" y="20" width="4" height="4" fill="#3730a3"/><rect x="24" y="20" width="4" height="4" fill="#312e81"/><rect x="8" y="24" width="4" height="4" fill="#4338ca"/><rect x="12" y="24" width="4" height="4" fill="#3730a3"/><rect x="16" y="24" width="4" height="4" fill="#312e81"/><rect x="20" y="24" width="4" height="4" fill="#312e81"/><rect x="12" y="28" width="4" height="4" fill="#312e81"/><rect x="16" y="28" width="4" height="4" fill="#1e1b4b"/></svg>boundbird</a>
-      <p>AI-powered LinkedIn outreach for agencies and small companies that need a full pipeline.</p>
+      <p>AI-powered WhatsApp and voice bots for SMEs. Handle customer conversations 24/7, without the complexity.</p>
     </div>
     <div class="footer-cols">
       <div class="footer-col">
@@ -854,7 +978,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 Boundbird. All rights reserved.</span>
+    <span>&copy; 2025 Boundbird. All rights reserved.</span>
     <span>Made in Barcelona</span>
   </div>
 </footer>
