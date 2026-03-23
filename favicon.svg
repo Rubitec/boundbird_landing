@@ -1,55 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <!-- 8x8 pixel grid (each pixel = 4x4 units), sphere centered at grid -->
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+ "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+ width="500.000000pt" height="500.000000pt" viewBox="0 0 500.000000 500.000000"
+ preserveAspectRatio="xMidYMid meet">
 
-  <!-- Row 0 (y=0): top of sphere -->
-  <rect x="12" y="0" width="4" height="4" fill="#a5b4fc"/>
-  <rect x="16" y="0" width="4" height="4" fill="#818cf8"/>
-
-  <!-- Row 1 (y=4) -->
-  <rect x="8"  y="4" width="4" height="4" fill="#c7d2fe"/>
-  <rect x="12" y="4" width="4" height="4" fill="#a5b4fc"/>
-  <rect x="16" y="4" width="4" height="4" fill="#818cf8"/>
-  <rect x="20" y="4" width="4" height="4" fill="#6366f1"/>
-
-  <!-- Row 2 (y=8) -->
-  <rect x="4"  y="8" width="4" height="4" fill="#a5b4fc"/>
-  <rect x="8"  y="8" width="4" height="4" fill="#c7d2fe"/>
-  <rect x="12" y="8" width="4" height="4" fill="#e0e7ff"/>
-  <rect x="16" y="8" width="4" height="4" fill="#a5b4fc"/>
-  <rect x="20" y="8" width="4" height="4" fill="#6366f1"/>
-  <rect x="24" y="8" width="4" height="4" fill="#4f46e5"/>
-
-  <!-- Row 3 (y=12) -->
-  <rect x="4"  y="12" width="4" height="4" fill="#818cf8"/>
-  <rect x="8"  y="12" width="4" height="4" fill="#a5b4fc"/>
-  <rect x="12" y="12" width="4" height="4" fill="#818cf8"/>
-  <rect x="16" y="12" width="4" height="4" fill="#7c3aed"/>
-  <rect x="20" y="12" width="4" height="4" fill="#6366f1"/>
-  <rect x="24" y="12" width="4" height="4" fill="#4338ca"/>
-
-  <!-- Row 4 (y=16) -->
-  <rect x="4"  y="16" width="4" height="4" fill="#6366f1"/>
-  <rect x="8"  y="16" width="4" height="4" fill="#818cf8"/>
-  <rect x="12" y="16" width="4" height="4" fill="#6366f1"/>
-  <rect x="16" y="16" width="4" height="4" fill="#5b21b6"/>
-  <rect x="20" y="16" width="4" height="4" fill="#4f46e5"/>
-  <rect x="24" y="16" width="4" height="4" fill="#3730a3"/>
-
-  <!-- Row 5 (y=20) -->
-  <rect x="4"  y="20" width="4" height="4" fill="#4f46e5"/>
-  <rect x="8"  y="20" width="4" height="4" fill="#6366f1"/>
-  <rect x="12" y="20" width="4" height="4" fill="#4f46e5"/>
-  <rect x="16" y="20" width="4" height="4" fill="#4338ca"/>
-  <rect x="20" y="20" width="4" height="4" fill="#3730a3"/>
-  <rect x="24" y="20" width="4" height="4" fill="#312e81"/>
-
-  <!-- Row 6 (y=24) -->
-  <rect x="8"  y="24" width="4" height="4" fill="#4338ca"/>
-  <rect x="12" y="24" width="4" height="4" fill="#3730a3"/>
-  <rect x="16" y="24" width="4" height="4" fill="#312e81"/>
-  <rect x="20" y="24" width="4" height="4" fill="#312e81"/>
-
-  <!-- Row 7 (y=28): bottom of sphere -->
-  <rect x="12" y="28" width="4" height="4" fill="#312e81"/>
-  <rect x="16" y="28" width="4" height="4" fill="#1e1b4b"/>
+<g transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)"
+fill="#000000" stroke="none">
+<path d="M2275 4989 c-312 -32 -587 -110 -863 -245 -724 -355 -1226 -1034
+-1363 -1844 -27 -162 -36 -461 -20 -637 58 -616 355 -1213 801 -1611 384 -344
+835 -556 1335 -629 165 -24 505 -24 670 0 821 120 1523 627 1885 1361 189 383
+270 761 257 1195 -11 376 -89 692 -252 1026 -362 741 -1052 1243 -1885 1370
+-127 19 -441 27 -565 14z m-639 -1183 c108 -39 162 -73 235 -145 120 -120 187
+-300 175 -469 -11 -155 -67 -275 -181 -388 -115 -115 -259 -174 -420 -174
+-269 0 -502 178 -581 445 -24 81 -24 239 0 320 59 201 211 355 411 418 75 24
+92 26 195 22 72 -2 112 -9 166 -29z m2239 19 c215 -45 394 -216 450 -430 28
+-109 17 -262 -27 -364 -10 -24 -287 -500 -616 -1059 -397 -675 -613 -1033
+-645 -1068 -153 -168 -405 -231 -620 -153 -182 65 -317 208 -373 395 -27 89
+-24 238 7 329 28 82 1210 2100 1271 2170 74 84 211 161 333 185 64 13 145 11
+220 -5z"/>
+</g>
 </svg>
