@@ -59,6 +59,9 @@ nav {
 .btn { padding: 8px 18px; border-radius: 8px; font-size: 0.875rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: all 0.15s; border: none; }
 .btn-primary { background: var(--accent); color: white; }
 .btn-primary:hover { background: var(--accent-hover); }
+.btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.btn-secondary:hover { background: var(--bg-muted); border-color: var(--border-dark); }
+.nav-right { display: flex; align-items: center; gap: 12px; }
 
 .pricing-hero {
   padding: 120px 24px 60px; text-align: center;
@@ -208,7 +211,8 @@ footer {
     <li><a href="/pricing.html" class="active">Pricing</a></li>
     <li><a href="/blog/">Blog</a></li>
   </ul>
-  <div>
+  <div class="nav-right">
+    <a href="https://app.boundbird.ai" class="btn btn-secondary">Go to platform</a>
     <a href="https://cal.com/rubitec/30min" class="btn btn-primary">Book a demo</a>
   </div>
 </nav>

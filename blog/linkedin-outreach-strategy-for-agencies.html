@@ -32,6 +32,9 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 24px;
 .btn { padding: 8px 18px; border-radius: 8px; font-size: 0.875rem; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; transition: all 0.15s; border: none; }
 .btn-primary { background: var(--accent); color: white; }
 .btn-primary:hover { background: var(--accent-hover); }
+.btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.btn-secondary:hover { background: var(--bg-muted); border-color: var(--border-dark); }
+.nav-right { display: flex; align-items: center; gap: 12px; }
 
 .post-layout { display: grid; grid-template-columns: 200px 1fr; max-width: 900px; margin: 0 auto; padding: 100px 24px 80px; gap: 48px; }
 .post-toc { position: sticky; top: 80px; align-self: start; }
@@ -86,7 +89,10 @@ footer { padding: 48px 24px 32px; border-top: 1px solid var(--border); max-width
     <li><a href="/pricing.html">Pricing</a></li>
     <li><a href="/blog/" class="active">Blog</a></li>
   </ul>
-  <div><a href="https://cal.com/rubitec/30min" class="btn btn-primary">Book a demo</a></div>
+  <div class="nav-right">
+    <a href="https://app.boundbird.ai" class="btn btn-secondary">Go to platform</a>
+    <a href="https://cal.com/rubitec/30min" class="btn btn-primary">Book a demo</a>
+  </div>
 </nav>
 
 <div class="post-layout">
